@@ -1,0 +1,7 @@
+{
+  "name": "sniper-dashboard-build",
+  "private": true,
+  "dependencies": {
+    "puppeteer": "^23.11.1"
+  }
+}
