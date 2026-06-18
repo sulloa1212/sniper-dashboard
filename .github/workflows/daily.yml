@@ -2,7 +2,7 @@ name: Daily dashboard (generate + publish)
 
 on:
   schedule:
-    - cron: '0 13 * * 1-5'      # ~09:00 ET weekdays (UTC; adjust for DST if needed)
+    - cron: '45 12 * * 1-5'      # ~09:00 ET weekdays (UTC; adjust for DST if needed)
   workflow_dispatch:            # manual "Run workflow" button for testing
 
 permissions:
