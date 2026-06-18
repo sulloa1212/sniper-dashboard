@@ -1,1 +1,269 @@
+  <div id="shareable">
+    <div class="header">
+      <div class="brand-lg">
+        {{ logo_plate | safe }}
+        <div class="brand-txt">
+          <h1>Sniper Daily Dashboard</h1>
+          <div class="sub">{{ meta.subtitle }}</div>
+        </div>
+      </div>
+      <div class="meta-wrap">
+        <div class="meta">
+          <div>Daily run · session</div>
+          <div class="stamp">{{ meta.stamp }}</div>
+        </div>
+        {{ mw_icon | safe }}
+      </div>
+    </div>
 
+    <div class="verdict" data-level="{{ verdict.color }}">
+      <div class="l">
+        <div class="badge">Sniper Action Verdict</div>
+        <div class="label"><span class="dot {{ verdict.dot }}"></span>{{ verdict.label }}</div>
+      </div>
+      <div class="desc">
+        {{ verdict.desc | safe }}
+      </div>
+    </div>
+
+    <!-- ======= HERO: instrument cluster ======= -->
+    <div class="cluster">
+      <div class="cluster-head">
+        <div class="ct"><b>Precision Read</b> · the two numbers that set today's verdict</div>
+        <div class="scope">Sniper Optics · 0–100</div>
+      </div>
+      <div class="dials">
+        <div class="dial-card">
+          <h3>Composite Gap-Risk Score</h3>
+          <div class="lead">0–100 · cool → mild → warm → hot → critical</div>
+          <div class="dial-wrap">
+            <svg class="dial-svg" viewBox="0 0 200 108" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <linearGradient id="gapGrad" x1="0" x2="1">
+                  <stop offset="0"    stop-color="#059669"/>
+                  <stop offset="0.24" stop-color="#10b981"/>
+                  <stop offset="0.25" stop-color="#84cc16"/>
+                  <stop offset="0.49" stop-color="#a3e635"/>
+                  <stop offset="0.50" stop-color="#eab308"/>
+                  <stop offset="0.69" stop-color="#facc15"/>
+                  <stop offset="0.70" stop-color="#ea580c"/>
+                  <stop offset="0.84" stop-color="#fb923c"/>
+                  <stop offset="0.85" stop-color="#dc2626"/>
+                  <stop offset="1"    stop-color="#ef4444"/>
+                </linearGradient>
+              </defs>
+              <path d="M 14 100 A 86 86 0 0 1 186 100" fill="none" stroke="rgba(255,255,255,.07)" stroke-width="23" stroke-linecap="butt"/>
+              <path d="M 14 100 A 86 86 0 0 1 186 100" fill="none" stroke="url(#gapGrad)" stroke-width="15" stroke-linecap="round"/>
+              <!-- ticks -->
+              <g stroke="rgba(255,255,255,.28)" stroke-width="1">
+                <line x1="14"  y1="100" x2="22"  y2="100"/>
+                <line x1="36.2" y1="42.7" x2="42.6" y2="47.5"/>
+                <line x1="100" y1="14" x2="100" y2="22"/>
+                <line x1="163.8" y1="42.7" x2="157.4" y2="47.5"/>
+                <line x1="186" y1="100" x2="178" y2="100"/>
+              </g>
+              <g id="gapNeedle" transform="rotate({{ composite.angle }} 100 100)">
+                <polygon points="100,100 96.5,34 100,24 103.5,34" fill="#ffffff"/>
+                <circle cx="100" cy="100" r="7" fill="#0a0e18" stroke="#e11221" stroke-width="2.4"/>
+                <circle cx="100" cy="100" r="2.4" fill="#e11221"/>
+              </g>
+              <text x="14"  y="107" fill="#92a0bc" font-size="7" font-family="ui-monospace,monospace" text-anchor="start">0</text>
+              <text x="100" y="11"  fill="#92a0bc" font-size="7" font-family="ui-monospace,monospace" text-anchor="middle">50</text>
+              <text x="186" y="107" fill="#92a0bc" font-size="7" font-family="ui-monospace,monospace" text-anchor="end">100</text>
+              <text x="26"  y="91" fill="#6ee7b7" font-size="5" text-anchor="start"  font-weight="700">COOL</text>
+              <text x="60"  y="49" fill="#bef264" font-size="5" text-anchor="start"  font-weight="700">MILD</text>
+              <text x="100" y="31" fill="#fde047" font-size="5" text-anchor="middle" font-weight="700">WARM</text>
+              <text x="142" y="49" fill="#fdba74" font-size="5" text-anchor="end"    font-weight="700">HOT</text>
+              <text x="176" y="91" fill="#fca5a5" font-size="5" text-anchor="end"    font-weight="700">CRIT</text>
+            </svg>
+          </div>
+          <div class="dial-readout">
+            <div class="v">{{ composite.score }}<small>/100</small></div>
+            <div class="band {{ composite.band_class }}">{{ composite.band_note }}</div>
+          </div>
+        </div>
+
+        <div class="dial-card">
+          <h3>P(≥1% Overnight Gap to Next Open)</h3>
+          <div class="lead">Trigger {{ gap.trigger }}% · above this line, a GREEN verdict is locked out</div>
+          <div class="dial-wrap">
+            <svg class="dial-svg" viewBox="0 0 200 108" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <linearGradient id="gapPct" x1="0" x2="1">
+                  <stop offset="0"    stop-color="#059669"/>
+                  <stop offset="0.34" stop-color="#84cc16"/>
+                  <stop offset="0.35" stop-color="#eab308"/>
+                  <stop offset="0.6"  stop-color="#ea580c"/>
+                  <stop offset="1"    stop-color="#dc2626"/>
+                </linearGradient>
+              </defs>
+              <path d="M 14 100 A 86 86 0 0 1 186 100" fill="none" stroke="rgba(255,255,255,.07)" stroke-width="23" stroke-linecap="butt"/>
+              <path d="M 14 100 A 86 86 0 0 1 186 100" fill="none" stroke="url(#gapPct)" stroke-width="15" stroke-linecap="round"/>
+              <g transform="rotate({{ gap.trigger_angle }} 100 100)">
+                <line x1="100" y1="24" x2="100" y2="12" stroke="#fca5a5" stroke-width="1.6" stroke-dasharray="2 1.6"/>
+                <text x="100" y="9" fill="#fca5a5" font-size="6" text-anchor="middle" font-weight="800">{{ gap.trigger }}% TRIGGER</text>
+              </g>
+              <g id="pctNeedle" transform="rotate({{ gap.angle }} 100 100)">
+                <polygon points="100,100 96.5,34 100,24 103.5,34" fill="#ffffff"/>
+                <circle cx="100" cy="100" r="7" fill="#0a0e18" stroke="#e11221" stroke-width="2.4"/>
+                <circle cx="100" cy="100" r="2.4" fill="#e11221"/>
+              </g>
+              <text x="14"  y="107" fill="#92a0bc" font-size="7" font-family="ui-monospace,monospace" text-anchor="start">0%</text>
+              <text x="100" y="11"  fill="#92a0bc" font-size="7" font-family="ui-monospace,monospace" text-anchor="middle">50%</text>
+              <text x="186" y="107" fill="#92a0bc" font-size="7" font-family="ui-monospace,monospace" text-anchor="end">100%</text>
+            </svg>
+          </div>
+          <div class="dial-readout">
+            <div class="v">{{ gap.pct }}<small>%</small></div>
+            <div class="band {{ gap.band_class }}">{{ gap.band_note }}</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>Today in Plain English</h2>
+      <div class="jobs">
+        <div class="jhead">
+          <div class="jbig">{{ focus.jbig }}</div>
+          <div class="jtag">{{ focus.jtag }}</div>
+        </div>
+        <div class="jgrid">
+          {% for s in focus.jstats %}<div class="jstat"><div class="l">{{ s.l }}</div><div class="v">{{ s.v | safe }}</div></div>
+          {% endfor %}
+        </div>
+        <div class="jnote">
+          {{ focus.jnote | safe }}
+        </div>
+        <div class="lens">
+          <div class="lensbox up">
+            <h4>"Not-DOWN" ideas — sell bull puts</h4>
+            {{ focus.notdown | safe }}
+          </div>
+          <div class="lensbox dn">
+            <h4>"Not-UP" ideas — sell bear calls</h4>
+            {{ focus.notup | safe }}
+          </div>
+        </div>
+        <div class="jnote" style="margin-top:12px;">
+          {{ focus.why | safe }}
+        </div>
+      </div>
+    </div>
+
+    <div class="typed-box">
+      <div class="block-title">The 3 Kinds of Sniper Trades — and how to read the table</div>
+      <div class="typed-grid">
+        <div class="tcard">
+          <div class="ttype">Type A</div>
+          <div class="tt">Fresh Post-Earnings Gap</div>
+          <p>The stock just reported earnings and jumped (or dropped) on the news. The earnings risk is now over.</p>
+          <div class="dir">Sell a bull put (up) or bear call (down)</div>
+        </div>
+        <div class="tcard">
+          <div class="ttype">Type B</div>
+          <div class="tt">News-Driven Gap</div>
+          <p>A clear piece of news moved the stock — a merger, court/agency ruling, FDA decision, big contract, or layoffs. Not rumors.</p>
+          <div class="dir">Sell with the move — bull put or bear call</div>
+        </div>
+        <div class="tcard">
+          <div class="ttype">Type C</div>
+          <div class="tt">ATH Breakout</div>
+          <p>The stock broke above its old high on heavy buying. Nothing overhead to stop it. Bullish only.</p>
+          <div class="dir">Sell a bull put only</div>
+        </div>
+      </div>
+      <div class="legend">
+        <b>Two different things, both labeled A/B/C.</b> <b>Setup Type</b> = what kind of trade it is (above).
+        <b>Sniper Grade</b> = how good it is today:
+        <span class="pill gA" style="margin:0 2px;">Grade A</span> take it ·
+        <span class="pill gB" style="margin:0 2px;">Grade B</span> trade small / watch ·
+        <span class="pill gC" style="margin:0 2px;">Grade C</span> skip it. The table below shows both in their own columns.
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>What's Driving the {{ composite.score }} Score</h2>
+      <div class="panel">
+        {% for b in how_built %}<div class="compbar {{ b.cls }}">
+          <span class="name">{{ b.name | safe }}</span><span class="num">{{ b.num }}</span>
+          <div class="track"><div class="fill" style="width:{{ b.width }}%"></div></div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>Market Snapshot · {{ meta.snapshot_label }}</h2>
+      <div class="stat-row">
+        {% for s in snapshot %}<div class="stat"><div class="lbl">{{ s.lbl }}</div><div class="val">{{ s.val | safe }}</div><div class="delta {{ s.cls }}">{{ s.delta | safe }}</div></div>
+        {% endfor %}
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>Today's Setups — Best to Worst (re-check all at 9:35 AM)</h2>
+      <div class="cands">
+        <div class="scroll">
+        <table>
+          <thead>
+            <tr><th>Ticker / Group</th><th>Bias</th><th>Setup Type</th><th>Sniper Grade</th><th>Read &amp; why it's graded</th><th>4-VAL</th></tr>
+          </thead>
+          <tbody>
+            {% for r in setups %}<tr>
+              <td class="tk">{{ r.ticker }}</td>
+              <td>{% if r.bias_label %}<span class="pill {{ r.bias_cls }}">{{ r.bias_label }}</span>{% else %}—{% endif %}</td>
+              <td>{% if r.type_label %}<span class="pill type">{{ r.type_label }}</span>{% else %}—{% endif %}</td>
+              <td>{% if r.grade_label %}<span class="pill {{ r.grade_cls }}">{{ r.grade_label }}</span>{% else %}<span class="pill {{ r.val_cls }}">{{ r.val_label }}</span>{% endif %}</td>
+              <td>{{ r.read | safe }}</td>
+              <td><span class="pill {{ r.val_cls }}">{{ r.val_label }}</span></td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+        </div>
+      </div>
+    </div>
+
+    <div class="grid2">
+      <div class="panel">
+        <h3>What Could Happen Next</h3>
+        {% for s in scenarios %}<div class="scen">
+          <div class="label">{{ s.label }}<small>{{ s.sub }}</small></div>
+          <div class="prob">{{ s.prob }}%</div>
+        </div>
+        {% endfor %}
+      </div>
+
+      <div class="panel">
+        <h3>What to Watch</h3>
+        <ul class="risks">
+          {% for r in risks %}<li>{{ r | safe }}</li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>Yesterday vs Today</h2>
+      <div class="panel">
+        <div class="scroll">
+        <table class="diff-tbl">
+          <thead><tr><th>Dimension</th><th>{{ yesterday.col_prior }}</th><th>{{ yesterday.col_today }}</th><th>Δ</th></tr></thead>
+          <tbody>
+            {% for r in yesterday.rows %}<tr><td>{{ r.dim }}</td><td>{{ r.prior | safe }}</td><td>{{ r.today | safe }}</td><td class="{{ r.cls }}">{{ r.delta | safe }}</td></tr>
+            {% endfor %}
+          </tbody>
+        </table>
+        </div>
+      </div>
+    </div>
+
+    <div class="foot">
+      {{ logo_foot | safe }}
+      <div>Composite <strong>{{ composite.score }}/100</strong> · P(≥1% gap) <strong>{{ gap.pct }}%</strong> · Verdict <strong>{{ verdict.color }}</strong> · {{ meta.rerun_note }}</div>
+    </div>
+
+    <div class="disclaimer"><strong>⚠️ AI-generated — may contain errors.</strong> This report is produced by an AI model using live web data and can be wrong, incomplete, or out of date. Verify every number and headline yourself before acting on anything here.<br><br>
+      <strong>Educational purposes only — not investment advice.</strong> The Freedom Management Group, Inc. d/b/a Michael Wade Trade Coaching is not a broker, adviser, or fiduciary. All trades are at your own risk; past performance does not guarantee future results. Options involve substantial risk and you can lose more than your investment — always paper trade first before risking real money. By using our services, you agree to our <a href="https://www.mwtradecoach.com/terms-and-conditions">Terms &amp; Conditions</a> and <a href="https://www.mwtradecoach.com/privacy-policy">Privacy Policy</a>.</div>
+  </div>

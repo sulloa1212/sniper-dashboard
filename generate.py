@@ -1,1 +1,116 @@
+#!/usr/bin/env python3
+"""
+Generate dashboard_data.json for today by running the Sniper master prompt
+through the Anthropic API with live web search.
 
+Requires env var: ANTHROPIC_API_KEY
+Reads:  master_prompt.md   (your Sniper master prompt)
+        dashboard_data.json (previous day -> used as the 'yesterday' reference)
+Writes: dashboard_data.json (today)
+
+Exits non-zero on a failed/empty/invalid result so the pipeline stops
+instead of publishing a broken dashboard. (This is a sanity check, NOT an
+approval gate — normal good output publishes with no human step.)
+"""
+import os, sys, json, datetime, urllib.request
+
+API_KEY = os.environ.get("ANTHROPIC_API_KEY")
+MODEL   = "claude-opus-4-8"          # swap to "claude-sonnet-4-6" for lower cost
+ENDPOINT = "https://api.anthropic.com/v1/messages"
+
+# --- US market holidays to skip (extend yearly) ---
+HOLIDAYS_2026 = {"2026-01-01","2026-01-19","2026-02-16","2026-04-03","2026-05-25",
+                 "2026-06-19","2026-07-03","2026-09-07","2026-11-26","2026-12-25"}
+
+def ny_today():
+    # GitHub runs in UTC; ET morning shares the same calendar date.
+    return datetime.datetime.utcnow().strftime("%Y-%m-%d")
+
+def skip_if_closed():
+    today = ny_today()
+    wd = datetime.date.fromisoformat(today).weekday()
+    if wd >= 5 or today in HOLIDAYS_2026:
+        print(f"Market closed {today} — skipping."); sys.exit(0)
+
+# The exact data shape the renderer expects (kept in sync with build_html.py).
+CONTRACT = open("dashboard_data.example.json", encoding="utf-8").read() \
+           if os.path.exists("dashboard_data.example.json") else ""
+
+def previous_day():
+    try:
+        return json.load(open("dashboard_data.json", encoding="utf-8"))
+    except Exception:
+        return None
+
+def call_model(master_prompt, prev):
+    instruction = f"""Run the analysis in the master prompt below using live web search for
+today's real market data. Then output ONLY a single JSON object for the dashboard — no
+prose, no markdown fences, nothing else.
+
+The JSON MUST match this exact structure and field names (this is an example with last
+session's data; replace every value with today's):
+
+{CONTRACT}
+
+Rules:
+- Output strictly valid JSON, starting with {{ and ending with }}.
+- Fill the "yesterday" section using the PREVIOUS session's numbers provided below.
+- Keep HTML allowed only inside the fields that already contain it in the example
+  (verdict.desc, focus.*, how_built[].name, snapshot[].val/delta, risks[], yesterday rows).
+- Use real, current figures from web search; if a figure can't be verified, say so in the text.
+
+PREVIOUS SESSION (for the 'yesterday' comparison):
+{json.dumps(prev) if prev else "none available"}
+
+=== MASTER PROMPT ===
+{master_prompt}
+"""
+    body = {
+        "model": MODEL,
+        "max_tokens": 8000,
+        "messages": [{"role": "user", "content": instruction}],
+        "tools": [{"type": "web_search_20250305", "name": "web_search"}],
+    }
+    req = urllib.request.Request(
+        ENDPOINT, data=json.dumps(body).encode(),
+        headers={"x-api-key": API_KEY, "anthropic-version": "2023-06-01",
+                 "content-type": "application/json"})
+    with urllib.request.urlopen(req, timeout=600) as r:
+        data = json.loads(r.read())
+    # Concatenate all text blocks (skip web_search tool blocks)
+    text = "".join(b.get("text", "") for b in data.get("content", []) if b.get("type") == "text")
+    return text
+
+def extract_json(text):
+    a, b = text.find("{"), text.rfind("}")
+    if a == -1 or b == -1:
+        raise ValueError("No JSON object found in model output")
+    return json.loads(text[a:b+1])
+
+REQUIRED = ["meta","verdict","composite","gap","focus","how_built","snapshot","setups","scenarios","risks","yesterday"]
+
+def validate(d):
+    missing = [k for k in REQUIRED if k not in d]
+    if missing:
+        raise ValueError(f"Missing required sections: {missing}")
+    if not (0 <= float(d["composite"]["score"]) <= 100):
+        raise ValueError("composite.score out of range")
+    if not (0 <= float(d["gap"]["pct"]) <= 100):
+        raise ValueError("gap.pct out of range")
+    if len(d["how_built"]) != 5:
+        raise ValueError("how_built must have exactly 5 bars")
+
+def main():
+    if not API_KEY:
+        print("ERROR: ANTHROPIC_API_KEY not set"); sys.exit(1)
+    skip_if_closed()
+    master = open("master_prompt.md", encoding="utf-8").read()
+    prev = previous_day()
+    text = call_model(master, prev)
+    data = extract_json(text)
+    validate(data)
+    json.dump(data, open("dashboard_data.json", "w", encoding="utf-8"), ensure_ascii=False, indent=2)
+    print("Wrote dashboard_data.json for", data["meta"].get("stamp", ny_today()))
+
+if __name__ == "__main__":
+    main()

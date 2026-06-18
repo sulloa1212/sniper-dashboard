@@ -1,1 +1,267 @@
-
+{
+  "meta": {
+    "subtitle": "Plain-English market read · Gap-risk check · Fed decides tomorrow",
+    "stamp": "Tue · Jun 16, 2026",
+    "snapshot_label": "Tue 6/16",
+    "rerun_note": "Re-run after FOMC Wed 6/17 2:30 PM"
+  },
+  "verdict": {
+    "color": "YELLOW",
+    "label": "YELLOW · Trade small or sit out",
+    "desc": "The new Fed Chair, <strong>Kevin Warsh, makes his first interest-rate decision tomorrow (Wed 2 PM ET)</strong> — the biggest unknown of the quarter. Today is calm: oil keeps falling and stocks are mixed (Dow at a record, tech lower). But selling spreads the day before a surprise-prone event is risky. <strong>Take one small trade at most, or simply wait until the Fed is done Wednesday.</strong>"
+  },
+  "composite": {
+    "score": 44,
+    "band": "MILD",
+    "band_note": "MILD · up from 38 · Fed decision tomorrow"
+  },
+  "gap": {
+    "pct": 24,
+    "trigger": 35,
+    "band_note": "Below the danger line · the bigger risk is Wed after the Fed"
+  },
+  "focus": {
+    "jbig": "New Fed Chair · Wed 2 PM ET",
+    "jtag": "A rate hold is expected — his tone is the wild card",
+    "jstats": [
+      {
+        "l": "Fed funds",
+        "v": "3.50–3.75% (hold ~97%)"
+      },
+      {
+        "l": "Dow / Nasdaq",
+        "v": "record high / −2%"
+      },
+      {
+        "l": "VIX",
+        "v": "~16.2 (near floor)"
+      },
+      {
+        "l": "WTI crude",
+        "v": "~$78–80 (−1.6%)"
+      }
+    ],
+    "jnote": "<strong>Today is a \"wait it out\" day.</strong> The Iran peace deal is still calming things down — oil is sliding toward $78 and war fears keep fading. Underneath, money is just moving around: the Dow hit a new record while tech stocks (NVDA, AVGO, MU) fell about 2%. If you sell a spread today, you'd hold it right through <strong>the new Fed Chair's first decision tomorrow</strong>. Everything looks calm — but the smart move is to wait.",
+    "notdown": "Industrials, financials (today's leaders), and airlines that benefit from cheaper oil. Real strength, but no single big news story behind them — low grade until the Fed is done.",
+    "notup": "<strong>Energy (XLE, XOM, CVX, OXY)</strong> is the best idea: oil is falling and the Strait of Hormuz reopens Friday, which caps the whole group. Semis are dropping too, but that's just momentum, not real news.",
+    "why": "<strong class=\"why\">Why YELLOW and not GREEN?</strong> The gap-risk numbers (44 and 24%) are calm enough for a green light — but our rule is simple: <em>never go full size right before a Fed decision.</em> A brand-new Chair's first meeting is the hardest thing to predict. Take one small Energy trade if it checks out at 9:35 AM, or just wait. <strong>Green light likely returns after the Fed finishes Wednesday at 2:30 PM.</strong>"
+  },
+  "how_built": [
+    {
+      "name": "Volatility — VIX <strong>~16.2</strong>, very calm, near its low",
+      "score": 7.0,
+      "max": 25
+    },
+    {
+      "name": "Big events (next 1–3 days) — <strong>the new Fed Chair's first decision is TOMORROW</strong>",
+      "score": 22.0,
+      "max": 30
+    },
+    {
+      "name": "World risk — war fears fading, but the Iran deal isn't signed until <strong>Friday</strong>",
+      "score": 7.0,
+      "max": 20
+    },
+    {
+      "name": "Volatility trend — back to normal (estimated)",
+      "score": 5.0,
+      "max": 15
+    },
+    {
+      "name": "Commodities — <strong>oil down 1.6%</strong>, which is calming, not scary",
+      "score": 3.0,
+      "max": 10
+    }
+  ],
+  "snapshot": [
+    {
+      "lbl": "SPX (Mon close)",
+      "val": "7,554.29",
+      "delta": "+1.65% Mon · soft today on chips",
+      "cls": "up"
+    },
+    {
+      "lbl": "Dow / Nasdaq",
+      "val": "record / −2%",
+      "delta": "rotation: value up, growth down",
+      "cls": "warn"
+    },
+    {
+      "lbl": "VIX (est.)",
+      "val": "~16.2",
+      "delta": "near floor · ticking up pre-Fed",
+      "cls": "warn"
+    },
+    {
+      "lbl": "Russell 2000",
+      "val": "Backsliding",
+      "delta": "cautious ahead of FOMC",
+      "cls": "dn"
+    },
+    {
+      "lbl": "WTI · Brent",
+      "val": "~$78–80 · ~$82",
+      "delta": "↓ ~1.6% · Hormuz reopens Fri",
+      "cls": "dn"
+    },
+    {
+      "lbl": "10Y Treasury",
+      "val": "~4.47%",
+      "delta": "steady into the decision",
+      "cls": "nt"
+    },
+    {
+      "lbl": "Gold",
+      "val": "~$4,334",
+      "delta": "+0.56% · still bid",
+      "cls": "warn"
+    },
+    {
+      "lbl": "SpaceX (SPCX)",
+      "val": "+~50%",
+      "delta": "post-IPO surge · ineligible",
+      "cls": "up"
+    }
+  ],
+  "setups": [
+    {
+      "ticker": "Energy · XLE/XOM/CVX/OXY",
+      "bias": "bear",
+      "bias_label": "Bear call",
+      "type_label": "Type B",
+      "grade": "B",
+      "grade_label": "Grade B",
+      "read": "Best idea. Oil is falling and Hormuz reopens Friday — that caps the whole group. Real news, but it's Fed eve, so trade half size.",
+      "val": "pending",
+      "val_label": "PENDING · ½ size"
+    },
+    {
+      "ticker": "Semis · SMH/NVDA/AVGO/MU",
+      "bias": "bear",
+      "bias_label": "Bear call",
+      "type_label": "Type B (weak)",
+      "grade": "C",
+      "grade_label": "Grade C",
+      "read": "Falling fast after a big run, but that's just momentum, not real news. Shorting a fast-dropping market before the Fed is risky.",
+      "val": "watch",
+      "val_label": "WATCH"
+    },
+    {
+      "ticker": "Industrials & Financials",
+      "bias": "bull",
+      "bias_label": "Bull put",
+      "type_label": "Type B (rotation)",
+      "grade": "C",
+      "grade_label": "Grade C",
+      "read": "Today's leaders with the Dow at a record, but no single news story and little support built yet. Wait.",
+      "val": "watch",
+      "val_label": "WATCH"
+    },
+    {
+      "ticker": "Robinhood (HOOD)",
+      "bias": "bear",
+      "bias_label": "Bear call",
+      "type_label": "Type B",
+      "grade": "C",
+      "grade_label": "Grade C",
+      "read": "Cutting 10% of staff is real news, but it's small, the stock only dropped about 1.5%, and there's little support nearby.",
+      "val": "watch",
+      "val_label": "WATCH"
+    },
+    {
+      "ticker": "SpaceX (SPCX)",
+      "bias": "",
+      "bias_label": "",
+      "type_label": "",
+      "grade": "",
+      "grade_label": "",
+      "read": "Brand-new IPO (+~50%): no options history, no support levels, not enough trading. Can't use it.",
+      "val": "invalid",
+      "val_label": "INELIGIBLE"
+    }
+  ],
+  "scenarios": [
+    {
+      "label": "Most likely — Quiet day, then wait for the Fed",
+      "sub": "Money keeps rotating; Dow firm, tech soft; everyone waits for Wed 2 PM",
+      "prob": 46
+    },
+    {
+      "label": "Good case — Fed sounds calm, stocks rally",
+      "sub": "Rate hold + friendly tone → relief rally and volatility drops after the decision",
+      "prob": 22
+    },
+    {
+      "label": "Bad case — Fed sounds tough, stocks drop",
+      "sub": "New Chair leans tough on sticky inflation → risk-off, tech leads the drop",
+      "prob": 26
+    },
+    {
+      "label": "Surprise — Iran or the Fed shocks the market",
+      "sub": "Iran deal stumbles before Friday, or a shock from the Fed → oil and volatility jump",
+      "prob": 6
+    }
+  ],
+  "risks": [
+    "<strong>The Fed decision · Wed 2 PM (Q&amp;A 2:30)</strong> — a rate hold is ~97% expected, but a brand-new Chair's first meeting is the hardest thing to predict this week.",
+    "<strong>\"Cuts coming\" could become \"no cuts\"</strong> — if the Fed signals fewer rate cuts ahead, growth and tech stocks can drop fast.",
+    "<strong>Semis rolling over</strong> — NVDA, AVGO, MU falling after a big run; don't short them without the 9:35 AM check.",
+    "<strong>Friday's Iran signing</strong> — the deal is signed Friday while the market is closed; headlines could move oil over the long weekend.",
+    "<strong>Inflation still sticky (~4.2%)</strong> — limits how friendly the Fed can sound."
+  ],
+  "yesterday": {
+    "col_prior": "Mon 6/15 (peace-deal pop)",
+    "col_today": "Tue 6/16 (FOMC eve)",
+    "rows": [
+      {
+        "dim": "Composite Gap-Risk Score",
+        "prior": "38 (MILD)",
+        "today": "44 (MILD)",
+        "delta": "+6 · event inside 24h",
+        "cls": "up"
+      },
+      {
+        "dim": "P(≥1% gap)",
+        "prior": "22%",
+        "today": "24%",
+        "delta": "+2 pts (pre-decision)",
+        "cls": "up"
+      },
+      {
+        "dim": "VIX",
+        "prior": "~15.8 (near floor)",
+        "today": "~16.2 (ticking up)",
+        "delta": "+0.4",
+        "cls": "up"
+      },
+      {
+        "dim": "Tape",
+        "prior": "Broad risk-on gap up",
+        "today": "Rotation: Dow record / Nasdaq −2%",
+        "delta": "narrowing leadership",
+        "cls": "nt"
+      },
+      {
+        "dim": "WTI crude",
+        "prior": "~$80.20 (−5.5%)",
+        "today": "~$78–80 (−1.6%)",
+        "delta": "still easing",
+        "cls": "dn"
+      },
+      {
+        "dim": "Dominant catalyst",
+        "prior": "U.S.-Iran peace deal",
+        "today": "Warsh's first FOMC (tomorrow)",
+        "delta": "geopolitics → policy",
+        "cls": "nt"
+      },
+      {
+        "dim": "Sniper Verdict",
+        "prior": "<span class=\"dot y\"></span>YELLOW",
+        "today": "<span class=\"dot y\"></span>YELLOW",
+        "delta": "hold fire into the Fed",
+        "cls": "nt"
+      }
+    ]
+  }
+}
