@@ -1,6 +1,6 @@
 {
   "meta": {
-    "subtitle": "Plain-English market read · Gap-risk check · Long-weekend after a hawkish Fed",
+    "subtitle": "Plain-English market read · Gap-risk check · Last session before the long Juneteenth weekend",
     "stamp": "Thu · Jun 18, 2026",
     "snapshot_label": "Thu 6/18",
     "rerun_note": "Markets CLOSED Fri 6/19 (Juneteenth) · re-run Mon 6/22"
@@ -8,7 +8,7 @@
   "verdict": {
     "color": "YELLOW",
     "label": "YELLOW · Trade small or sit out",
-    "desc": "Yesterday the new Fed Chair <strong>Kevin Warsh delivered a hawkish surprise</strong> — a dot plot showing many officials want a rate HIKE this year — and stocks fell about 1.2% while bond yields jumped. Today the market is digesting that shock. The bigger problem: <strong>markets are closed Friday for Juneteenth, and the Iran peace deal gets signed Friday in Geneva while you can't trade.</strong> Any spread you sell today is exposed over a 3-day weekend with live headline risk. <strong>Take one small trade at most, or simply wait until Monday.</strong>"
+    "desc": "Wednesday the new Fed Chair <strong>Kevin Warsh delivered a hawkish surprise</strong> — the Fed held rates but its dot plot flipped from cuts to possible HIKES (the 2026 median moved to 3.8% from 3.4%), and <strong>stocks fell about 1.2% while bond yields jumped</strong>. Today is the last regular session before a 3-day weekend: <strong>markets are closed Friday for Juneteenth, and the U.S.–Iran peace deal is being signed Friday in Switzerland while you can't trade.</strong> Any spread you sell today rides over the weekend with live headline risk — and today is also quarterly \"triple-witching\" expiration. <strong>Take one small trade at most, or simply wait until Monday.</strong>"
   },
   "composite": {
     "score": 48,
@@ -26,39 +26,39 @@
     "jstats": [
       {
         "l": "Fed funds",
-        "v": "3.50–3.75% (held) · dots now lean HIKE"
+        "v": "3.50–3.75% (held) · 2026 dot now 3.8%, leans HIKE"
       },
       {
         "l": "S&P / Nasdaq (Wed)",
-        "v": "−1.21% / −1.34%"
+        "v": "−1.2% / −1.3%"
       },
       {
         "l": "VIX",
-        "v": "~16.4 (rose ~12% Wed)"
+        "v": "~18.4 (rose ~12% Wed)"
       },
       {
         "l": "WTI crude",
         "v": "~$76 (3-month low)"
       }
     ],
-    "jnote": "<strong>Today is a \"wait it out\" day.</strong> Yesterday's Fed was the big shock — <strong>a very hawkish dot plot showed roughly half of officials want at least one rate hike this year</strong>, the opposite of the cuts markets expected entering 2026. Stocks dropped about 1.2% and the 10-year yield jumped to ~4.50%. Now you face a 3-day weekend: <strong>markets are closed Friday for Juneteenth</strong>, and the <strong>Iran peace deal is set to be signed Friday in Geneva</strong> with the Strait of Hormuz reopening — all while you can't trade. Everything you sell today rides through that. The smart move is to wait until Monday."
+    "jnote": "<strong>Today is a \"wait it out\" day.</strong> Wednesday's Fed was the big shock — <strong>nine of 18 officials penciled in at least one rate hike this year</strong>, the opposite of the cuts markets expected entering 2026, and Warsh said the Fed <strong>\"dropped\" its forward guidance</strong>. Stocks dropped about 1.2% and Treasury yields jumped (2-year +16 bps). Now you face a 3-day weekend: <strong>markets are closed Friday for Juneteenth</strong>, and the <strong>U.S.–Iran peace deal is set to be signed Friday in Switzerland</strong> with the Strait of Hormuz reopening — all while you can't trade. Today is also quarterly triple-witching, which can add choppiness. The smart move is to wait until Monday.",
+    "notdown": "Energy and defensives held up best relative to the tape, but there's no fresh bullish catalyst — and shorting puts into a hawkish-Fed, rising-yield backdrop is low grade. Wait.",
+    "notup": "<strong>Rate-sensitive growth & tech (NVDA, MSFT, META)</strong> is the cleaner read down: higher-for-longer rates pressure long-duration stocks, and Wednesday's losses were led by mega-cap tech (META −5.5%, MSFT −3.8%). But it's pre-holiday with the Iran signing looming, so size down hard.",
+    "why": "<strong class=\"why\">Why YELLOW and not RED?</strong> The raw numbers (48 and 30%) are still inside the calm zone, so this isn't a full stand-down. But two rules apply: <em>never carry full size over a long weekend</em>, and <em>respect a fresh policy shock.</em> The Fed just flipped from cuts to possible hikes and the Iran deal signs Friday while the market is closed. Take one small, well-supported trade if it checks out at 9:35 AM, or just wait. <strong>A cleaner read returns Monday 6/22 once the weekend headlines are priced in.</strong>"
   },
-  "notdown": "Energy and defensives held up best relative to the tape, but there's no fresh bullish catalyst — and shorting puts into a hawkish-Fed, rising-yield backdrop is low grade. Wait.",
-  "notup": "<strong>Rate-sensitive growth & tech (NVDA, MSFT, META, mega-cap)</strong> is the cleaner read down: higher-for-longer rates pressure long-duration stocks, and Wed's losses were led by mega-cap tech. But it's pre-holiday with the Iran signing looming, so size down hard.",
-  "why": "<strong class=\"why\">Why YELLOW and not RED?</strong> The raw numbers (48 and 30%) are still inside the calm zone, so this isn't a full stand-down. But two rules apply: <em>never carry full size over a long weekend</em>, and <em>respect a fresh policy shock.</em> The Fed just flipped from cuts to possible hikes and the Iran deal signs Friday while the market is closed. Take one small, well-supported trade if it checks out at 9:35 AM, or just wait. <strong>A cleaner read returns Monday 6/22 once the weekend headlines are priced in.</strong>",
   "how_built": [
     {
-      "name": "Volatility — VIX <strong>~16.4</strong>, still low but <strong>up ~12% on the Fed</strong>",
+      "name": "Volatility — VIX <strong>~18.4</strong>, still moderate but <strong>up ~12% on the Fed</strong>",
       "score": 9.0,
       "max": 25
     },
     {
-      "name": "Big events (next 1–3 days) — <strong>3-day weekend + Iran signing Friday while closed</strong>",
+      "name": "Big events (next 1–3 days) — <strong>3-day weekend + Iran signing Friday while closed + triple-witching today</strong>",
       "score": 20.0,
       "max": 30
     },
     {
-      "name": "World risk — Iran deal not final; Trump warned he could \"go back to dropping bombs\"",
+      "name": "World risk — Iran deal a 60-day framework, not a final settlement; Hormuz reopening still uncertain",
       "score": 9.0,
       "max": 20
     },
@@ -76,20 +76,20 @@
   "snapshot": [
     {
       "lbl": "SPX (Wed close)",
-      "val": "7,420.10",
-      "delta": "−1.21% Wed · hawkish-Fed selloff",
+      "val": "~7,420",
+      "delta": "−1.2% Wed · hawkish-Fed selloff",
       "cls": "dn"
     },
     {
       "lbl": "Dow / Nasdaq",
-      "val": "51,492.55 / 26,021.66",
-      "delta": "−0.98% / −1.34% · mega-cap tech led down",
+      "val": "Dow −507 pts / Nasdaq −1.3%",
+      "delta": "all 11 sectors fell · mega-cap tech led down",
       "cls": "dn"
     },
     {
       "lbl": "VIX",
-      "val": "~16.4",
-      "delta": "rose ~12% Wed · still low but rising",
+      "val": "~18.4",
+      "delta": "rose ~12% Wed · trending higher",
       "cls": "warn"
     },
     {
@@ -100,14 +100,14 @@
     },
     {
       "lbl": "WTI · Brent",
-      "val": "~$76 · ~$79",
-      "delta": "3-month low · Hormuz reopens Fri",
+      "val": "~$76 · ~$78",
+      "delta": "3-month low · Iran deal signed, Hormuz reopens",
       "cls": "dn"
     },
     {
       "lbl": "10Y Treasury",
-      "val": "~4.50%",
-      "delta": "↑ jumped on hawkish dot plot",
+      "val": "~4.46–4.50%",
+      "delta": "↑ jumped on hawkish dot plot (2Y +16bp to 4.21%)",
       "cls": "warn"
     },
     {
@@ -118,8 +118,8 @@
     },
     {
       "lbl": "SpaceX (SPCX)",
-      "val": "~$208 (+3%)",
-      "delta": "post-IPO rally · ineligible",
+      "val": "post-IPO surge",
+      "delta": "public June 12 · ineligible",
       "cls": "up"
     }
   ],
@@ -131,7 +131,7 @@
       "type_label": "Type B",
       "grade": "C",
       "grade_label": "Grade C",
-      "read": "Higher-for-longer rates pressure long-duration tech, and these led Wed's drop. But shorting into a fast move right before a 3-day weekend with the Iran signing is risky. Half size at most.",
+      "read": "Higher-for-longer rates pressure long-duration tech, and these led Wed's drop (META −5.5%, MSFT −3.8%). But shorting into a fast move right before a 3-day weekend with the Iran signing is risky. Half size at most.",
       "val": "watch",
       "val_label": "WATCH · ½ size"
     },
@@ -142,7 +142,7 @@
       "type_label": "Type B",
       "grade": "C",
       "grade_label": "Grade C",
-      "read": "Oil is at 3-month lows and Hormuz reopens Friday, which caps the group — but the signing happens over the closed weekend, so headlines could whipsaw oil Monday. Stand down into the holiday.",
+      "read": "Oil is at 3-month lows and the Iran deal is being signed Friday, which caps the group — but the signing happens over the closed weekend, so headlines could whipsaw oil Monday. Stand down into the holiday.",
       "val": "watch",
       "val_label": "WATCH"
     },
@@ -175,7 +175,7 @@
       "type_label": "",
       "grade": "",
       "grade_label": "",
-      "read": "Brand-new IPO (public June 12, ~$208): no options history, no support levels, parabolic post-IPO move. Can't use it.",
+      "read": "Brand-new IPO (public June 12): no options history, no support levels, parabolic post-IPO move. Can't use it.",
       "val": "invalid",
       "val_label": "INELIGIBLE"
     }
@@ -183,7 +183,7 @@
   "scenarios": [
     {
       "label": "Most likely — Quiet, choppy digestion, then the long weekend",
-      "sub": "Market absorbs the hawkish Fed; light pre-holiday volume; everyone flat into Friday's close",
+      "sub": "Market absorbs the hawkish Fed; triple-witching adds noise; everyone flat into Friday's close",
       "prob": 44
     },
     {
@@ -198,15 +198,15 @@
     },
     {
       "label": "Surprise — Iran signing stumbles over the weekend",
-      "sub": "Geneva ceremony slips or Trump's \"back to bombs\" warning escalates → oil & vol gap Monday",
+      "sub": "Geneva ceremony slips or Hormuz reopening stalls → oil & vol gap Monday",
       "prob": 6
     }
   ],
   "risks": [
-    "<strong>3-day weekend gap risk · markets CLOSED Fri 6/19 (Juneteenth)</strong> — any spread you hold rides through Friday and the weekend with no ability to trade.",
-    "<strong>Iran deal signs Friday in Geneva while the market is closed</strong> — Trump said Hormuz \"completely reopens\" Friday but also warned he could \"go right back to dropping bombs\"; oil could gap Monday.",
-    "<strong>Hawkish dot plot · cuts flipped to possible hikes</strong> — roughly half of officials penciled in at least one 2026 hike; growth and tech can keep dropping if yields rise further.",
-    "<strong>10-year yield near one-year highs (~4.50%)</strong> — rising rates keep pressuring long-duration tech and small caps.",
+    "<strong>3-day weekend gap risk · markets CLOSED Fri 6/19 (Juneteenth)</strong> — any spread you hold rides through Friday and the weekend with no ability to trade; today is also quarterly triple-witching.",
+    "<strong>Iran deal signs Friday in Switzerland while the market is closed</strong> — the interim deal reopens the Strait of Hormuz and resumes Iranian oil exports, but it's a 60-day framework, not a final settlement; oil could gap Monday.",
+    "<strong>Hawkish dot plot · cuts flipped to possible hikes</strong> — nine of 18 officials penciled in at least one 2026 hike and the median rate forecast rose to 3.8%; growth and tech can keep dropping if yields rise further.",
+    "<strong>10-year yield elevated (~4.46–4.50%)</strong> — rising rates keep pressuring long-duration tech and small caps.",
     "<strong>Warsh dropped forward guidance</strong> — the Fed said it \"can't give guidance on what's next,\" raising policy uncertainty and the odds of bigger surprises ahead."
   ],
   "yesterday": {
@@ -229,21 +229,21 @@
       },
       {
         "dim": "VIX",
-        "prior": "~16.2 (pre-Fed)",
-        "today": "~16.4 (rose ~12% on Fed)",
-        "delta": "+0.2 · trend higher",
+        "prior": "~16.4 (pre-Fed)",
+        "today": "~18.4 (rose ~12% on Fed)",
+        "delta": "+2.0 · trend higher",
         "cls": "up"
       },
       {
         "dim": "Tape",
         "prior": "Rotation: Dow record / Nasdaq −2%",
-        "today": "Broad risk-off: SPX −1.21%, tech led down",
+        "today": "Broad risk-off: SPX −1.2%, all 11 sectors down",
         "delta": "rotation → selloff",
         "cls": "dn"
       },
       {
         "dim": "WTI crude",
-        "prior": "~$76.27 (+0.3%)",
+        "prior": "~$76.27",
         "today": "~$76 (3-month low)",
         "delta": "still near lows",
         "cls": "dn"
