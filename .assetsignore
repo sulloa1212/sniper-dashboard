@@ -1,0 +1,13 @@
+# Build/source files Cloudflare should NOT publish to the website
+node_modules
+.github
+*.py
+*.j2
+*.md
+Sniper_Dashboard_TEMPLATE.html
+dashboard_data.json
+dashboard_data.example.json
+package.json
+package-lock.json
+bun.lockb
+render.js
