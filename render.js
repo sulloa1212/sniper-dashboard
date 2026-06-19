@@ -36,5 +36,38 @@ const path = require('path');
   fs.copyFileSync('latest.html', path.join('archive', `${date}.html`));
   fs.copyFileSync('latest.png',  path.join('archive', `${date}.png`));
 
+  // Maintain 5 most recent days and create manifest
+  const files = fs.readdirSync('archive');
+  const htmlFiles = files.filter(f => f.match(/^\d{4}-\d{2}-\d{2}\.html$/)).sort().reverse();
+  
+  const recent = htmlFiles.slice(0, 5);
+  const toDelete = htmlFiles.slice(5);
+
+  toDelete.forEach(f => {
+    fs.unlinkSync(path.join('archive', f));
+    const pngFile = f.replace('.html', '.png');
+    if (fs.existsSync(path.join('archive', pngFile))) {
+      fs.unlinkSync(path.join('archive', pngFile));
+    }
+  });
+
+  const manifest = recent.map(f => {
+    const d = f.replace('.html', '');
+    // Parse date safely treating it as UTC noon to avoid timezone shifts
+    const dateObj = new Date(d + 'T12:00:00Z');
+    // Format to "Thu Jun 18"
+    const label = new Intl.DateTimeFormat('en-US', { weekday: 'short', month: 'short', day: 'numeric' })
+      .format(dateObj)
+      .replace(',', ''); // remove comma if present
+      
+    return {
+      date: d,
+      file: `archive/${f}`,
+      label: label
+    };
+  });
+
+  fs.writeFileSync(path.join('archive', 'index.json'), JSON.stringify(manifest, null, 2));
+
   console.log('Rendered latest.png and archived ' + date);
 })();

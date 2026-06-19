@@ -80,7 +80,17 @@
   main { padding: 28px 24px 40px; max-width: 1240px; margin: 0 auto; }
 
   /* ---------- toolbar ---------- */
-  .toolbar { display: flex; justify-content: flex-end; gap: 10px; margin-bottom: 16px; }
+  .toolbar { display: flex; justify-content: space-between; align-items: center; gap: 10px; margin-bottom: 16px; }
+  .toolbar-actions { display: flex; justify-content: flex-end; gap: 10px; }
+  .archive-nav { display: flex; gap: 6px; flex-wrap: wrap; }
+  .archive-nav a {
+    font-size: 12px; font-weight: 700; letter-spacing: .05em; text-transform: uppercase; text-decoration: none;
+    color: var(--ink-2); background: var(--surface); border: 1px solid var(--line-2);
+    border-radius: 10px; padding: 8px 12px; box-shadow: var(--shadow-sm);
+    transition: all 160ms var(--ease-out);
+  }
+  .archive-nav a:hover { background: var(--surface-3); }
+  .archive-nav a.active { color: #fff; background: var(--brand); border-color: var(--brand-ink); }
   .btn {
     font-family: var(--sans); font-size: 12px; font-weight: 700; letter-spacing: .05em;
     text-transform: uppercase; color: #fff; background: var(--brand);
@@ -328,8 +338,11 @@
 <body>
 <main>
   <div class="toolbar">
-    <button class="btn ghost" onclick="window.print()">Print</button>
-    <button class="btn" onclick="exportPNG()">Save as PNG</button>
+    <div id="archive-nav" class="archive-nav"></div>
+    <div class="toolbar-actions">
+      <button class="btn ghost" onclick="window.print()">Print</button>
+      <button class="btn" onclick="exportPNG()">Save as PNG</button>
+    </div>
   </div>
 
     <div id="shareable">
@@ -693,6 +706,36 @@
       a.click();
     });
   }
+
+  document.addEventListener("DOMContentLoaded", async () => {
+    try {
+      const res = await fetch('/archive/index.json', { cache: 'no-store' });
+      if (!res.ok) return;
+      const manifest = await res.json();
+      
+      const nav = document.getElementById('archive-nav');
+      if (!nav) return;
+      
+      const currentPath = window.location.pathname;
+      let currentFile = 'latest';
+      if (currentPath.includes('/archive/')) {
+        currentFile = currentPath.split('/').pop();
+      }
+
+      nav.innerHTML = manifest.map((item, index) => {
+        const itemFileName = item.file.split('/').pop();
+        let isActive = false;
+        // If we are at root/latest, highlight the newest (index 0)
+        if (currentFile === 'latest' && index === 0) isActive = true;
+        // Or if the filename matches exactly
+        else if (currentFile === itemFileName) isActive = true;
+        
+        return `<a href="/${item.file}" class="${isActive ? 'active' : ''}">${item.label}</a>`;
+      }).join('');
+    } catch (e) {
+      console.error('Failed to load archive nav:', e);
+    }
+  });
 </script>
 </body>
 </html>
