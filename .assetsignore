@@ -11,3 +11,5 @@ package.json
 package-lock.json
 bun.lockb
 render.js
+functions
+src

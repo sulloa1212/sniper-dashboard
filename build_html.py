@@ -87,6 +87,12 @@ def build():
     # ---- stitch: locked head + rendered body + locked tail ----
     src = open(TEMPLATE, encoding="utf-8").read()
     head = src[:src.index('<div id="shareable">')]
+    
+    # Fix: update the static template title with today's date
+    stamp = d.get("meta", {}).get("stamp", "")
+    new_title = f"Sniper Daily Dashboard · {stamp}" if stamp else "Sniper Daily Dashboard"
+    head = re.sub(r'<title>.*?</title>', f'<title>{new_title}</title>', head)
+
     tail = src[src.index('</main>'):]
     html = head + body + "\n" + tail
 
