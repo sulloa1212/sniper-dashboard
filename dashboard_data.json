@@ -8,7 +8,7 @@
   "verdict": {
     "color": "YELLOW",
     "label": "YELLOW · Trade small or sit out",
-    "desc": "Calmer open after the long weekend: <strong>U.S.–Iran talks showed \"encouraging progress\" with a 60-day roadmap to a final deal</strong>, oil is sliding and stocks are mixed (Dow up, Nasdaq soft). But the market is still digesting last week's hawkish Fed — <strong>short-term yields are near cycle highs as traders now price a possible rate HIKE as early as September</strong>, and Thursday's Core PCE inflation report is the week's big test. <strong>Take one small, well-supported trade at most, or wait for the inflation read.</strong>"
+    "desc": "Calmer open after the long weekend: <strong>U.S.–Iran talks showed \"major progress\" with a 60-day roadmap to a final deal</strong>, oil is sliding toward $74 and stocks are mixed (Dow up, Nasdaq soft). But the market is still digesting last week's hawkish Fed under new Chair Warsh — <strong>traders now price a possible rate HIKE later in 2026 and short-end yields stay firm</strong>, and Thursday's Core PCE inflation report is the week's big test. <strong>Take one small, well-supported trade at most, or wait for the inflation read.</strong>"
   },
   "composite": {
     "score": 41,
@@ -26,7 +26,7 @@
     "jstats": [
       {
         "l": "Fed funds",
-        "v": "3.50–3.75% (held) · markets eye a Sept HIKE"
+        "v": "3.50–3.75% (held) · markets eye a 2026 HIKE"
       },
       {
         "l": "Dow / Nasdaq",
@@ -38,12 +38,12 @@
       },
       {
         "l": "WTI crude",
-        "v": "~$74 (−2%)"
+        "v": "~$74 (−1 to −2%)"
       }
     ],
-    "jnote": "<strong>Today is a calmer \"wait for the data\" day.</strong> The weekend passed without a shock: <strong>Iran reported \"major progress\" and both sides agreed a roadmap to a final deal within 60 days</strong>, which pushed oil toward $74. But last week's hawkish Fed still hangs over everything — <strong>nine of 19 officials penciled in at least one 2026 hike</strong>, and the 10-year yield has climbed back near 4.48% as traders bet on a hike as soon as September. The cleanest fresh catalyst today is the <strong>AbbVie–Apogee $10.9B all-cash buyout</strong>. <strong>Thursday's Core PCE inflation report</strong> is the real test, so size down.",
-    "notdown": "Industrials and financials held the Dow firm, and small caps (Russell 2000) bounced hard at the open (+2.1%) — but that's rotation, not a single named catalyst, and rising yields can reverse it. Low grade.",
-    "notup": "<strong>Energy (XLE, XOM, CVX, OXY)</strong> is the cleaner bearish read: oil is sliding toward $74 on the Iran 60-day roadmap and Gulf producers ramping output. Real, durable news — but it's pre-PCE, so half size at most.",
+    "jnote": "<strong>Today is a calmer \"wait for the data\" day.</strong> The weekend passed without a shock: <strong>Iran reported \"major progress\" and both sides agreed a roadmap to a final deal within 60 days</strong>, which pushed oil toward $74 — near its lowest since early March. But last week's hawkish Fed still hangs over everything — <strong>nine of 18 officials penciled in at least one 2026 hike</strong>, and the 10-year yield sits near 4.45% as traders bet on a possible hike. Underneath, money is rotating: small caps (Russell 2000 +2.1%) and chips lead while AI hyperscalers (Alphabet, Amazon, Meta) lag. The cleanest fresh catalyst is the <strong>AbbVie–Apogee $10.9B all-cash buyout</strong>. <strong>Thursday's Core PCE inflation report</strong> is the real test, so size down.",
+    "notdown": "Industrials and financials held the Dow firm, and small caps (Russell 2000) bounced hard (+2.1%) as yields eased slightly — but that's rotation, not a single named catalyst, and a hawkish Fed could reverse it. Low grade.",
+    "notup": "<strong>Energy (XLE, XOM, CVX, OXY)</strong> is the cleaner bearish read: oil is sliding toward $74 on the Iran 60-day roadmap, Hormuz reopening, and Gulf producers ramping output. Real, durable news — but it's pre-PCE, so half size at most.",
     "why": "<strong class=\"why\">Why YELLOW and not GREEN?</strong> The gap-risk numbers (41 and 22%) are calm enough for a green light — but two rules apply: <em>respect a fresh policy shock</em> (the Fed just flipped from cuts to possible hikes) and <em>don't go full size right before a major inflation print.</em> <strong>Core PCE lands Thursday 8:30 AM.</strong> Take one small, well-supported trade if it checks out at 9:35 AM, or wait. A cleaner read returns after PCE."
   },
   "how_built": [
@@ -68,7 +68,7 @@
       "max": 15
     },
     {
-      "name": "Commodities — <strong>oil down ~2%</strong>, which is calming for inflation, not scary",
+      "name": "Commodities — <strong>oil down ~1–2%</strong>, which is calming for inflation, not scary",
       "score": 3.0,
       "max": 10
     }
@@ -95,30 +95,30 @@
     {
       "lbl": "Russell 2000",
       "val": "+~2.1%",
-      "delta": "bouncing at the open · rate-sensitive",
+      "delta": "bouncing · rate-sensitive lift",
       "cls": "up"
     },
     {
       "lbl": "WTI · Brent",
       "val": "~$74 · ~$78",
-      "delta": "↓ ~2% · Iran 60-day roadmap",
+      "delta": "↓ ~1–2% · Iran 60-day roadmap",
       "cls": "dn"
     },
     {
-      "lbl": "10Y · 2Y Treasury",
-      "val": "~4.48% · ~4.20%",
-      "delta": "near cycle high · Sept hike eyed",
+      "lbl": "10Y Treasury",
+      "val": "~4.45%",
+      "delta": "firm · hawkish-Fed hangover",
       "cls": "warn"
     },
     {
       "lbl": "Gold",
       "val": "~$4,200",
-      "delta": "rebounding · toward $4,200",
+      "delta": "resilient · still catching a bid",
       "cls": "warn"
     },
     {
       "lbl": "Apogee (APGE)",
-      "val": "+~48%",
+      "val": "+~47%",
       "delta": "AbbVie $10.9B all-cash buyout",
       "cls": "up"
     }
@@ -131,7 +131,7 @@
       "type_label": "Type B",
       "grade": "B",
       "grade_label": "Grade B",
-      "read": "Best idea. Oil is sliding toward $74 on the Iran 60-day roadmap and Gulf producers ramping output — that caps the whole group. Real, durable news, but it's pre-PCE, so trade half size.",
+      "read": "Best idea. Oil is sliding toward $74 on the Iran 60-day roadmap, Hormuz reopening, and Gulf producers ramping output — that caps the whole group. Real, durable news, but it's pre-PCE, so trade half size.",
       "val": "pending",
       "val_label": "PENDING · ½ size"
     },
@@ -153,7 +153,7 @@
       "type_label": "Type B (weak)",
       "grade": "C",
       "grade_label": "Grade C",
-      "read": "Chips extended their rally pre-market, but that's momentum, not a single clean catalyst — and higher-for-longer rates pressure them. Micron reports later this week, adding earnings risk. Wait.",
+      "read": "Chips extended their historic rally (Micron, Sandisk +5%), but that's momentum, not a single clean catalyst — and higher-for-longer rates pressure them. Micron reports later this week, adding earnings risk. Wait.",
       "val": "watch",
       "val_label": "WATCH"
     },
@@ -164,7 +164,7 @@
       "type_label": "Type B (rotation)",
       "grade": "C",
       "grade_label": "Grade C",
-      "read": "Today's leaders with the Dow firm, but it's broad rotation with no single news story and rising yields could reverse it. Wait.",
+      "read": "Today's leaders with the Dow firm and banks (BofA, JPM) up ~2%, but it's broad rotation with no single news story and a hawkish Fed could reverse it. Wait.",
       "val": "watch",
       "val_label": "WATCH"
     },
@@ -188,7 +188,7 @@
     },
     {
       "label": "Bad case — Yields climb, tech rolls over",
-      "sub": "Hike fears stick and the short end keeps rising → pressure on long-duration growth and small caps",
+      "sub": "Hike fears stick and the short end stays firm → pressure on long-duration growth and AI hyperscalers",
       "prob": 25
     },
     {
@@ -203,11 +203,11 @@
     }
   ],
   "risks": [
-    "<strong>Core PCE inflation · Thu 6/25 8:30 AM</strong> — the Fed's favorite inflation gauge; the Fed just sharply raised its PCE forecasts, so a firm print could push yields and hike odds higher.",
-    "<strong>Hike fears rising · 2-year near a cycle high (~4.20%)</strong> — markets now price a possible Fed rate hike as early as September; growth and tech can drop fast if yields keep climbing.",
-    "<strong>Iran deal not signed yet</strong> — it's only a 60-day roadmap, and last week's Switzerland talks were abruptly postponed; oil could whipsaw on any setback.",
-    "<strong>Micron earnings this week</strong> — don't sell spreads on that name into its report; the print adds gap risk.",
-    "<strong>S&amp;P Global flash PMIs · Tuesday</strong> — a soft reading could shift the growth-vs-inflation debate quickly."
+    "<strong>Core PCE inflation · Thu 6/25 8:30 AM</strong> — the Fed's favorite inflation gauge; PPI components that map to PCE suggest a firm print, so a hot number could push yields and hike odds higher.",
+    "<strong>Hike fears rising · short end firm</strong> — markets now price a possible Fed rate hike later in 2026; growth and tech can drop fast if yields keep climbing.",
+    "<strong>Iran deal not signed yet</strong> — it's a 60-day roadmap built on last week's MOU; oil could whipsaw on any setback.",
+    "<strong>Micron (MU) earnings this week</strong> — don't sell spreads on that name into its report; the print adds gap risk.",
+    "<strong>S&amp;P Global flash PMIs · Tuesday 6/23</strong> — a soft reading could shift the growth-vs-inflation debate quickly."
   ],
   "yesterday": {
     "col_prior": "Thu 6/18 (post-Fed · pre-holiday)",
@@ -243,14 +243,14 @@
       },
       {
         "dim": "WTI crude",
-        "prior": "~$77.50 (Switzerland talks off)",
-        "today": "~$74 (−2%)",
+        "prior": "~$77.50 (MOU signed)",
+        "today": "~$74 (−1 to −2%)",
         "delta": "still easing",
         "cls": "dn"
       },
       {
         "dim": "Dominant catalyst",
-        "prior": "Hawkish-Fed digestion + Iran uncertainty",
+        "prior": "Hawkish-Fed digestion + Iran MOU",
         "today": "Iran 60-day roadmap + AbbVie–Apogee M&amp;A; PCE Thu",
         "delta": "weekend risk → data watch",
         "cls": "nt"
