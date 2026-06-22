@@ -1,265 +1,265 @@
 {
   "meta": {
-    "subtitle": "Plain-English market read · Gap-risk check · Last session before the long Juneteenth weekend",
-    "stamp": "Thu · Jun 18, 2026",
-    "snapshot_label": "Thu 6/18",
-    "rerun_note": "Markets CLOSED Fri 6/19 (Juneteenth) · re-run Mon 6/22"
+    "subtitle": "Plain-English market read · Gap-risk check · First session after the long Juneteenth weekend",
+    "stamp": "Mon · Jun 22, 2026",
+    "snapshot_label": "Mon 6/22",
+    "rerun_note": "Core PCE inflation report Thu 6/25 8:30 AM · re-run after"
   },
   "verdict": {
     "color": "YELLOW",
     "label": "YELLOW · Trade small or sit out",
-    "desc": "Wednesday the new Fed Chair <strong>Kevin Warsh delivered a hawkish surprise</strong> — the Fed held rates but its dot plot flipped from cuts to possible HIKES (the 2026 median moved to 3.8% from 3.4%), and <strong>stocks fell about 1.2% while bond yields jumped</strong>. Today is the last regular session before a 3-day weekend: <strong>markets are closed Friday for Juneteenth, and the U.S.–Iran peace deal is being signed Friday in Switzerland while you can't trade.</strong> Any spread you sell today rides over the weekend with live headline risk — and today is also quarterly \"triple-witching\" expiration. <strong>Take one small trade at most, or simply wait until Monday.</strong>"
+    "desc": "Calmer open after the long weekend: <strong>U.S.–Iran talks showed \"encouraging progress\" with a 60-day roadmap to a final deal</strong>, oil is sliding and stocks are mixed (Dow up, Nasdaq soft). But the market is still digesting last week's hawkish Fed — <strong>short-term yields just hit cycle highs as traders now price a possible rate HIKE as soon as September</strong>, and Thursday's Core PCE inflation report is the week's big test. <strong>Take one small, well-supported trade at most, or wait for the inflation read.</strong>"
   },
   "composite": {
-    "score": 48,
+    "score": 41,
     "band": "MILD",
-    "band_note": "MILD · up from 44 · post-Fed shock + 3-day weekend"
+    "band_note": "MILD · down from 48 · weekend passed cleanly, PCE still ahead"
   },
   "gap": {
-    "pct": 30,
+    "pct": 22,
     "trigger": 35,
-    "band_note": "Below the danger line · but it covers a 3-day weekend with the Iran signing"
+    "band_note": "Below the danger line · the bigger risk is Thursday's PCE inflation report"
   },
   "focus": {
-    "jbig": "Digesting a hawkish Fed · 3-day weekend ahead",
-    "jtag": "Warsh's dot plot flipped from cuts to possible hikes — yields jumped",
+    "jbig": "Quiet open · digesting a hawkish Fed",
+    "jtag": "Oil falls on Iran progress; PCE inflation lands Thursday",
     "jstats": [
       {
         "l": "Fed funds",
-        "v": "3.50–3.75% (held) · 2026 dot now 3.8%, leans HIKE"
+        "v": "3.50–3.75% (held) · markets eye a Sept HIKE"
       },
       {
-        "l": "S&P / Nasdaq (Wed)",
-        "v": "−1.2% / −1.3%"
+        "l": "Dow / Nasdaq",
+        "v": "+0.4% / −0.3% (mixed)"
       },
       {
         "l": "VIX",
-        "v": "~18.4 (rose ~12% Wed)"
+        "v": "~16.4–16.8 (calm)"
       },
       {
         "l": "WTI crude",
-        "v": "~$76 (3-month low)"
+        "v": "~$74–75 (−2 to −3%)"
       }
     ],
-    "jnote": "<strong>Today is a \"wait it out\" day.</strong> Wednesday's Fed was the big shock — <strong>nine of 18 officials penciled in at least one rate hike this year</strong>, the opposite of the cuts markets expected entering 2026, and Warsh said the Fed <strong>\"dropped\" its forward guidance</strong>. Stocks dropped about 1.2% and Treasury yields jumped (2-year +16 bps). Now you face a 3-day weekend: <strong>markets are closed Friday for Juneteenth</strong>, and the <strong>U.S.–Iran peace deal is set to be signed Friday in Switzerland</strong> with the Strait of Hormuz reopening — all while you can't trade. Today is also quarterly triple-witching, which can add choppiness. The smart move is to wait until Monday.",
-    "notdown": "Energy and defensives held up best relative to the tape, but there's no fresh bullish catalyst — and shorting puts into a hawkish-Fed, rising-yield backdrop is low grade. Wait.",
-    "notup": "<strong>Rate-sensitive growth & tech (NVDA, MSFT, META)</strong> is the cleaner read down: higher-for-longer rates pressure long-duration stocks, and Wednesday's losses were led by mega-cap tech (META −5.5%, MSFT −3.8%). But it's pre-holiday with the Iran signing looming, so size down hard.",
-    "why": "<strong class=\"why\">Why YELLOW and not RED?</strong> The raw numbers (48 and 30%) are still inside the calm zone, so this isn't a full stand-down. But two rules apply: <em>never carry full size over a long weekend</em>, and <em>respect a fresh policy shock.</em> The Fed just flipped from cuts to possible hikes and the Iran deal signs Friday while the market is closed. Take one small, well-supported trade if it checks out at 9:35 AM, or just wait. <strong>A cleaner read returns Monday 6/22 once the weekend headlines are priced in.</strong>"
+    "jnote": "<strong>Today is a calmer \"wait for the data\" day.</strong> The weekend passed without a shock: <strong>Iran reported \"major progress\" and both sides agreed a roadmap to a final deal within 60 days</strong>, which pushed oil lower again. But last week's hawkish Fed still hangs over everything — <strong>nine of 18 officials penciled in at least one 2026 hike</strong>, and the 2-year yield has climbed to new cycle highs near 4.22% as traders bet on a hike as soon as September. The cleanest fresh catalyst today is the <strong>AbbVie–Apogee $10.9B all-cash buyout</strong>. <strong>Thursday's Core PCE inflation report</strong> is the real test, so size down.",
+    "notdown": "Industrials and financials held the Dow near records, and small caps (Russell 2000) bounced hard at the open — but that's rotation, not a single named catalyst, and rising yields can reverse it. Low grade.",
+    "notup": "<strong>Energy (XLE, XOM, CVX, OXY)</strong> is the cleaner bearish read: oil is sliding toward $74 on the Iran 60-day roadmap and Gulf producers ramping output. Real, durable news — but it's pre-PCE, so half size at most.",
+    "why": "<strong class=\"why\">Why YELLOW and not GREEN?</strong> The gap-risk numbers (41 and 22%) are calm enough for a green light — but two rules apply: <em>respect a fresh policy shock</em> (the Fed just flipped from cuts to possible hikes) and <em>don't go full size right before a major inflation print.</em> <strong>Core PCE lands Thursday 8:30 AM.</strong> Take one small, well-supported trade if it checks out at 9:35 AM, or wait. A cleaner read returns after PCE."
   },
   "how_built": [
     {
-      "name": "Volatility — VIX <strong>~18.4</strong>, still moderate but <strong>up ~12% on the Fed</strong>",
-      "score": 9.0,
+      "name": "Volatility — VIX <strong>~16.4–16.8</strong>, calm, near its long-term average",
+      "score": 7.0,
       "max": 25
     },
     {
-      "name": "Big events (next 1–3 days) — <strong>3-day weekend + Iran signing Friday while closed + triple-witching today</strong>",
-      "score": 20.0,
+      "name": "Big events (next 1–3 days) — <strong>Core PCE inflation report Thursday</strong> + PMIs Tuesday",
+      "score": 17.0,
       "max": 30
     },
     {
-      "name": "World risk — Iran deal a 60-day framework, not a final settlement; Hormuz reopening still uncertain",
-      "score": 9.0,
+      "name": "World risk — <strong>Iran 60-day roadmap calming things</strong>, but no signed final deal yet",
+      "score": 8.0,
       "max": 20
     },
     {
-      "name": "Volatility trend — <strong>ticking up</strong> after the hawkish dot plot",
-      "score": 7.0,
+      "name": "Volatility trend — easing back down after last week's Fed spike",
+      "score": 6.0,
       "max": 15
     },
     {
-      "name": "Commodities — <strong>oil at 3-month lows (~$76)</strong>, calming for inflation",
+      "name": "Commodities — <strong>oil down ~2–3%</strong>, which is calming for inflation, not scary",
       "score": 3.0,
       "max": 10
     }
   ],
   "snapshot": [
     {
-      "lbl": "SPX (Wed close)",
-      "val": "~7,420",
-      "delta": "−1.2% Wed · hawkish-Fed selloff",
-      "cls": "dn"
+      "lbl": "SPX (intraday)",
+      "val": "~7,505",
+      "delta": "+0.1% · mixed, value over growth",
+      "cls": "warn"
     },
     {
       "lbl": "Dow / Nasdaq",
-      "val": "Dow −507 pts / Nasdaq −1.3%",
-      "delta": "all 11 sectors fell · mega-cap tech led down",
-      "cls": "dn"
+      "val": "+0.4% / −0.3%",
+      "delta": "rotation: Dow firm, tech soft",
+      "cls": "warn"
     },
     {
       "lbl": "VIX",
-      "val": "~18.4",
-      "delta": "rose ~12% Wed · trending higher",
-      "cls": "warn"
+      "val": "~16.4–16.8",
+      "delta": "calm · easing after Fed spike",
+      "cls": "nt"
     },
     {
       "lbl": "Russell 2000",
-      "val": "~2,965",
-      "delta": "lagging · rate-sensitive into the weekend",
-      "cls": "warn"
+      "val": "+~2.1%",
+      "delta": "bouncing at the open · rate-sensitive",
+      "cls": "up"
     },
     {
       "lbl": "WTI · Brent",
-      "val": "~$76 · ~$78",
-      "delta": "3-month low · Iran deal signed, Hormuz reopens",
+      "val": "~$74–75 · ~$78–80",
+      "delta": "↓ ~2–3% · Iran 60-day roadmap",
       "cls": "dn"
     },
     {
-      "lbl": "10Y Treasury",
-      "val": "~4.46–4.50%",
-      "delta": "↑ jumped on hawkish dot plot (2Y +16bp to 4.21%)",
+      "lbl": "10Y · 2Y Treasury",
+      "val": "~4.49% · ~4.22%",
+      "delta": "2Y at cycle high · Sept hike eyed",
       "cls": "warn"
     },
     {
       "lbl": "Gold",
-      "val": "~$4,348",
-      "delta": "−0.14% · steady amid higher real yields",
-      "cls": "nt"
+      "val": "~$4,198",
+      "delta": "+1.1% · bouncing off recent lows",
+      "cls": "warn"
     },
     {
-      "lbl": "SpaceX (SPCX)",
-      "val": "post-IPO surge",
-      "delta": "public June 12 · ineligible",
+      "lbl": "Apogee (APGE)",
+      "val": "+~48%",
+      "delta": "AbbVie $10.9B all-cash buyout",
       "cls": "up"
     }
   ],
   "setups": [
     {
-      "ticker": "Mega-cap Tech · NVDA/MSFT/META",
-      "bias": "bear",
-      "bias_label": "Bear call",
-      "type_label": "Type B",
-      "grade": "C",
-      "grade_label": "Grade C",
-      "read": "Higher-for-longer rates pressure long-duration tech, and these led Wed's drop (META −5.5%, MSFT −3.8%). But shorting into a fast move right before a 3-day weekend with the Iran signing is risky. Half size at most.",
-      "val": "watch",
-      "val_label": "WATCH · ½ size"
-    },
-    {
       "ticker": "Energy · XLE/XOM/CVX/OXY",
       "bias": "bear",
       "bias_label": "Bear call",
       "type_label": "Type B",
-      "grade": "C",
-      "grade_label": "Grade C",
-      "read": "Oil is at 3-month lows and the Iran deal is being signed Friday, which caps the group — but the signing happens over the closed weekend, so headlines could whipsaw oil Monday. Stand down into the holiday.",
-      "val": "watch",
-      "val_label": "WATCH"
+      "grade": "B",
+      "grade_label": "Grade B",
+      "read": "Best idea. Oil is sliding toward $74 on the Iran 60-day roadmap and Gulf producers ramping output — that caps the whole group. Real, durable news, but it's pre-PCE, so trade half size.",
+      "val": "pending",
+      "val_label": "PENDING · ½ size"
     },
     {
-      "ticker": "Russell 2000 · IWM",
-      "bias": "bear",
-      "bias_label": "Bear call",
+      "ticker": "Apogee (APGE)",
+      "bias": "",
+      "bias_label": "",
+      "type_label": "Type B",
+      "grade": "",
+      "grade_label": "Invalid",
+      "read": "AbbVie is buying it for $135.11/share cash (~$10.9B) — the stock is pinned near the deal price. Once a name agrees to an all-cash buyout it stops moving, so there's no spread edge here. Skip.",
+      "val": "invalid",
+      "val_label": "INELIGIBLE"
+    },
+    {
+      "ticker": "Semis · SMH/NVDA/AVGO/MU",
+      "bias": "bull",
+      "bias_label": "Bull put",
       "type_label": "Type B (weak)",
       "grade": "C",
       "grade_label": "Grade C",
-      "read": "Small caps lag on rising yields, but that's a macro drift, not a single named catalyst. Not a clean Sniper setup. Wait.",
+      "read": "Chips extended their rally pre-market, but that's momentum, not a single clean catalyst — and higher-for-longer rates pressure them. Micron reports later this week, adding earnings risk. Wait.",
       "val": "watch",
       "val_label": "WATCH"
     },
     {
-      "ticker": "Defensives · Staples/Utilities",
+      "ticker": "Industrials & Financials",
       "bias": "bull",
       "bias_label": "Bull put",
       "type_label": "Type B (rotation)",
       "grade": "C",
       "grade_label": "Grade C",
-      "read": "Relative safety in a risk-off tape, but rising yields hurt rate-proxy utilities and there's no fresh catalyst or built support. Low grade.",
+      "read": "Today's leaders with the Dow near a record, but it's broad rotation with no single news story and rising yields could reverse it. Wait.",
       "val": "watch",
       "val_label": "WATCH"
     },
     {
-      "ticker": "SpaceX (SPCX)",
-      "bias": "",
-      "bias_label": "",
-      "type_label": "",
-      "grade": "",
-      "grade_label": "",
-      "read": "Brand-new IPO (public June 12): no options history, no support levels, parabolic post-IPO move. Can't use it.",
-      "val": "invalid",
-      "val_label": "INELIGIBLE"
+      "ticker": "Lucid (LCID)",
+      "bias": "bear",
+      "bias_label": "Bear call",
+      "type_label": "Type B",
+      "grade": "C",
+      "grade_label": "Grade C",
+      "read": "Cutting ~18% of U.S. staff and losing its COO is real news, but it's a low-priced, thin-option stock with little support to lean on. Not a clean Sniper setup.",
+      "val": "watch",
+      "val_label": "WATCH"
     }
   ],
   "scenarios": [
     {
-      "label": "Most likely — Quiet, choppy digestion, then the long weekend",
-      "sub": "Market absorbs the hawkish Fed; triple-witching adds noise; everyone flat into Friday's close",
-      "prob": 44
+      "label": "Most likely — Quiet, choppy digestion ahead of PCE",
+      "sub": "Money keeps rotating; Dow firm, tech mixed; everyone waits for Thursday's inflation read",
+      "prob": 47
     },
     {
-      "label": "Bad case — Yields keep rising, tech keeps sliding",
-      "sub": "Hike fears stick → more pressure on long-duration growth and small caps",
-      "prob": 28
+      "label": "Bad case — Yields climb, tech rolls over",
+      "sub": "Hike fears stick and the 2-year keeps rising → pressure on long-duration growth and small caps",
+      "prob": 25
     },
     {
-      "label": "Good case — Oversold bounce, dip-buyers step in",
-      "sub": "Stocks stabilize as oil at 3-month lows eases the inflation story → relief rally",
+      "label": "Good case — Soft PCE hopes, oil keeps falling",
+      "sub": "Cheaper oil eases the inflation story and dip-buyers step in → broad relief rally",
       "prob": 22
     },
     {
-      "label": "Surprise — Iran signing stumbles over the weekend",
-      "sub": "Geneva ceremony slips or Hormuz reopening stalls → oil & vol gap Monday",
+      "label": "Surprise — Iran talks stumble or a shock hits",
+      "sub": "The 60-day roadmap breaks down or a hot data point lands → oil and volatility jump",
       "prob": 6
     }
   ],
   "risks": [
-    "<strong>3-day weekend gap risk · markets CLOSED Fri 6/19 (Juneteenth)</strong> — any spread you hold rides through Friday and the weekend with no ability to trade; today is also quarterly triple-witching.",
-    "<strong>Iran deal signs Friday in Switzerland while the market is closed</strong> — the interim deal reopens the Strait of Hormuz and resumes Iranian oil exports, but it's a 60-day framework, not a final settlement; oil could gap Monday.",
-    "<strong>Hawkish dot plot · cuts flipped to possible hikes</strong> — nine of 18 officials penciled in at least one 2026 hike and the median rate forecast rose to 3.8%; growth and tech can keep dropping if yields rise further.",
-    "<strong>10-year yield elevated (~4.46–4.50%)</strong> — rising rates keep pressuring long-duration tech and small caps.",
-    "<strong>Warsh dropped forward guidance</strong> — the Fed said it \"can't give guidance on what's next,\" raising policy uncertainty and the odds of bigger surprises ahead."
+    "<strong>Core PCE inflation · Thu 6/25 8:30 AM</strong> — the Fed's favorite inflation gauge; PPI components that feed it suggest a firm print, which could push yields and hike odds higher.",
+    "<strong>Hike fears rising · 2-year at a cycle high (~4.22%)</strong> — markets now price a possible Fed rate hike as early as September; growth and tech can drop fast if yields keep climbing.",
+    "<strong>Iran deal not signed yet</strong> — it's only a 60-day roadmap, and last week's Switzerland talks were abruptly postponed; oil could whipsaw on any setback.",
+    "<strong>Micron &amp; FedEx earnings this week</strong> — don't sell spreads on those names into their reports; the prints add gap risk.",
+    "<strong>S&amp;P Global flash PMIs · Tuesday</strong> — a soft reading could shift the growth-vs-inflation debate quickly."
   ],
   "yesterday": {
-    "col_prior": "Wed 6/17 (FOMC day · hawkish shock)",
-    "col_today": "Thu 6/18 (post-Fed · pre-holiday)",
+    "col_prior": "Thu 6/18 (post-Fed · pre-holiday)",
+    "col_today": "Mon 6/22 (first session back)",
     "rows": [
       {
         "dim": "Composite Gap-Risk Score",
-        "prior": "44 (MILD)",
-        "today": "48 (MILD)",
-        "delta": "+4 · 3-day weekend ahead",
-        "cls": "up"
-      },
-      {
-        "dim": "P(≥1% gap)",
-        "prior": "24%",
-        "today": "30%",
-        "delta": "+6 pts (covers long weekend)",
-        "cls": "up"
-      },
-      {
-        "dim": "VIX",
-        "prior": "~16.4 (pre-Fed)",
-        "today": "~18.4 (rose ~12% on Fed)",
-        "delta": "+2.0 · trend higher",
-        "cls": "up"
-      },
-      {
-        "dim": "Tape",
-        "prior": "Rotation: Dow record / Nasdaq −2%",
-        "today": "Broad risk-off: SPX −1.2%, all 11 sectors down",
-        "delta": "rotation → selloff",
+        "prior": "48 (MILD)",
+        "today": "41 (MILD)",
+        "delta": "−7 · weekend passed cleanly",
         "cls": "dn"
       },
       {
+        "dim": "P(≥1% gap)",
+        "prior": "30%",
+        "today": "22%",
+        "delta": "−8 pts (no weekend shock)",
+        "cls": "dn"
+      },
+      {
+        "dim": "VIX",
+        "prior": "~18.4 (rose on Fed)",
+        "today": "~16.4–16.8 (easing)",
+        "delta": "−1.6 to −2.0 · calming",
+        "cls": "dn"
+      },
+      {
+        "dim": "Tape",
+        "prior": "Broad risk-off: SPX −1.2%, all sectors down",
+        "today": "Mixed: Dow +0.4% / Nasdaq −0.3% / RUT +2.1%",
+        "delta": "selloff → rotation",
+        "cls": "nt"
+      },
+      {
         "dim": "WTI crude",
-        "prior": "~$76.27",
-        "today": "~$76 (3-month low)",
-        "delta": "still near lows",
+        "prior": "~$76 (3-month low)",
+        "today": "~$74–75 (−2 to −3%)",
+        "delta": "still easing",
         "cls": "dn"
       },
       {
         "dim": "Dominant catalyst",
-        "prior": "Warsh's first FOMC (decision day)",
-        "today": "Hawkish-Fed digestion + Fri Iran signing",
-        "delta": "policy shock → weekend risk",
+        "prior": "Hawkish-Fed digestion + Fri Iran signing",
+        "today": "Iran 60-day roadmap + AbbVie–Apogee M&amp;A; PCE Thu",
+        "delta": "weekend risk → data watch",
         "cls": "nt"
       },
       {
         "dim": "Sniper Verdict",
         "prior": "<span class=\"dot y\"></span>YELLOW",
         "today": "<span class=\"dot y\"></span>YELLOW",
-        "delta": "hold fire over the long weekend",
+        "delta": "small size into PCE",
         "cls": "nt"
       }
     ]
