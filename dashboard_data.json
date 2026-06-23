@@ -1,36 +1,36 @@
 {
   "meta": {
-    "subtitle": "Plain-English market read · Gap-risk check · Chip selloff goes global · PCE Thursday",
+    "subtitle": "Plain-English market read · Gap-risk check · Global chip selloff hits Wall Street · PCE Thursday",
     "stamp": "Tue · Jun 23, 2026",
     "snapshot_label": "Tue 6/23",
-    "rerun_note": "Core PCE inflation report Thu 6/25 8:30 AM · re-run after"
+    "rerun_note": "Core PCE inflation report Thu 6/25 8:30 AM · re-run after · Micron earnings tonight"
   },
   "verdict": {
     "color": "YELLOW",
     "label": "YELLOW · Trade small or sit out",
-    "desc": "A global chip selloff is hitting the tape this morning: <strong>South Korea's KOSPI crashed about 10% — its worst day in months — as investors dumped semiconductors on fears the AI rally got overheated</strong>. U.S. futures are lower, led by tech. Oil keeps sliding toward $73 on Iran peace progress, and volatility is creeping up (VIX ~17.3). On top of that, <strong>FedEx reports tonight and Thursday's Core PCE inflation report is the week's big test</strong>. <strong>Take one small, well-supported trade at most, or wait for the inflation read.</strong>"
+    "desc": "A global chip selloff is hitting the tape today: <strong>Asian and European semiconductors cratered — South Korea's Kospi slid sharply and Micron, Qualcomm and Arm are all down 8%+ in the U.S.</strong> as investors dump AI/chip names. The Nasdaq-100 is off nearly 3% and the S&P 500 is lower. Oil keeps sliding toward $73–74 on Iran peace progress, and volatility is creeping up (VIX ~17.3). On top of that, <strong>Micron reports tomorrow and Thursday's Core PCE inflation report is the week's big test</strong>. <strong>Take one small, well-supported trade at most, or wait for the inflation read.</strong>"
   },
   "composite": {
-    "score": 46,
+    "score": 47,
     "band": "MILD",
-    "band_note": "MILD · up from 41 · global chip selloff + PCE ahead"
+    "band_note": "MILD · up from 41 · global chip rout + PCE ahead"
   },
   "gap": {
-    "pct": 27,
+    "pct": 28,
     "trigger": 35,
-    "band_note": "Below the danger line · but rising on the chip rout; bigger risk is Thursday's PCE"
+    "band_note": "Below the danger line · rising on the chip rout; the bigger risk is Thursday's PCE"
   },
   "focus": {
-    "jbig": "Global chip selloff · digesting a hawkish Fed",
-    "jtag": "Korea's KOSPI crashes ~10% on chips; oil falls; PCE lands Thursday",
+    "jbig": "Global chip selloff · hawkish-Fed hangover",
+    "jtag": "Asia chips crash, U.S. semis follow; oil falls; PCE lands Thursday",
     "jstats": [
       {
         "l": "Fed funds",
         "v": "3.50–3.75% (held) · markets eye a 2026 HIKE"
       },
       {
-        "l": "Dow / Nasdaq fut",
-        "v": "−0.3% / −1.7% (tech-led drop)"
+        "l": "Dow / Nasdaq Comp",
+        "v": "~+0.1% / ~−1.5% (tech-led drop)"
       },
       {
         "l": "VIX",
@@ -38,13 +38,13 @@
       },
       {
         "l": "WTI crude",
-        "v": "~$73 (−1%)"
+        "v": "~$74 (−2.4%)"
       }
     ],
-    "jnote": "<strong>Today is a jittery \"wait for the data\" day.</strong> The big new story is overseas: <strong>South Korea's KOSPI plunged about 10% — its steepest drop in over three months — as foreign investors dumped chip stocks on signals the sector's rally had gotten overheated</strong>; <strong>Samsung and SK Hynix each fell more than 12%, triggering a trading halt</strong>. That selloff is bleeding into U.S. tech futures. Oil keeps sliding toward $73 on Iran peace progress, but last week's hawkish Fed still hangs over everything — <strong>traders now price a possible 2026 rate hike and the 10-year yield sits near 4.5%</strong>. <strong>FedEx reports after the close tonight</strong> and <strong>Core PCE inflation lands Thursday</strong>, so size down.",
-    "notdown": "Industrials and financials (banks BofA, JPM up ~2% yesterday) held the Dow firm, but that's rotation, not a single named catalyst, and a global risk-off wave could reverse it. Low grade.",
-    "notup": "<strong>Energy (XLE, XOM, CVX, OXY)</strong> stays the cleaner bearish read: oil is sliding toward $73 on the Iran 60-day roadmap and Gulf supply hopes. Real, durable news. <strong>Semis (SMH, NVDA, AVGO, MU)</strong> are now dropping hard on the global chip rout — but shorting a fast-falling group on momentum (not a named catalyst) into MU earnings is risky. Energy half size; semis watch only.",
-    "why": "<strong class=\"why\">Why YELLOW and not GREEN?</strong> The gap-risk numbers (46 and 27%) are still calm enough for a green light on paper — but three rules apply: <em>respect a fresh policy shock</em> (the Fed just flipped from cuts to possible hikes), <em>don't short a fast-falling market on pure momentum</em>, and <em>don't go full size right before a major inflation print.</em> <strong>Core PCE lands Thursday 8:30 AM</strong> and <strong>FedEx reports tonight.</strong> Take one small, well-supported trade if it checks out at 9:35 AM, or wait. A cleaner read returns after PCE."
+    "jnote": "<strong>Today is a jittery \"wait for the data\" day.</strong> The big story is in chips: <strong>Asian and European semiconductors got hammered overnight and U.S. names followed — Micron fell about 11%, Qualcomm and Arm dropped roughly 8%, and the chip ETF SMH slid more than 6%</strong>. That selloff is dragging the Nasdaq lower while the Dow holds up better. <strong>Oil keeps sliding toward $73–74 on the U.S.–Iran 60-day roadmap and a 60-day license letting Iran sell oil</strong>, but last week's hawkish Fed still hangs over everything — <strong>traders now price a possible September rate hike (~68% odds) with the 10-year near 4.5%</strong>. <strong>Micron reports after the close tomorrow</strong> and <strong>Core PCE inflation lands Thursday</strong>, so size down.",
+    "notdown": "Industrials and financials held the Dow firmer than the broad tape, but that's rotation, not a single named catalyst, and a global risk-off wave could reverse it fast. Low grade.",
+    "notup": "<strong>Energy (XLE, XOM, CVX, OXY)</strong> stays the cleaner bearish read: oil is sliding toward $73–74 on the Iran 60-day roadmap, the new sales license, and Gulf producers ramping output. Real, durable news. <strong>Semis (SMH, NVDA, AVGO, MU)</strong> are dropping hard on the global chip rout — but shorting a fast-falling group on pure momentum into Micron earnings is risky. Energy half size; semis watch only.",
+    "why": "<strong class=\"why\">Why YELLOW and not GREEN?</strong> The gap-risk numbers (47 and 28%) are still calm enough for a green light on paper — but three rules apply: <em>respect a fresh policy shock</em> (the Fed just flipped from cuts to possible hikes), <em>don't short a fast-falling market on pure momentum</em>, and <em>don't go full size right before a major inflation print.</em> <strong>Core PCE lands Thursday 8:30 AM</strong> and <strong>Micron reports tomorrow night.</strong> Take one small, well-supported trade if it checks out at 9:35 AM, or wait. A cleaner read returns after PCE."
   },
   "how_built": [
     {
@@ -53,13 +53,13 @@
       "max": 25
     },
     {
-      "name": "Big events (next 1–3 days) — <strong>Core PCE Thursday</strong> + flash PMIs today + FedEx earnings tonight",
+      "name": "Big events (next 1–3 days) — <strong>Core PCE Thursday</strong> + Micron earnings tomorrow night + flash PMIs",
       "score": 18.0,
       "max": 30
     },
     {
-      "name": "World risk — <strong>global chip selloff (KOSPI −10%)</strong>; Iran roadmap calming, but no signed deal yet",
-      "score": 10.0,
+      "name": "World risk — <strong>global chip selloff</strong>; Iran roadmap calming, but no signed deal yet",
+      "score": 11.0,
       "max": 20
     },
     {
@@ -68,7 +68,7 @@
       "max": 15
     },
     {
-      "name": "Commodities — <strong>oil down ~1%</strong>, which is calming for inflation, not scary",
+      "name": "Commodities — <strong>oil down ~2.4%</strong>, which is calming for inflation, not scary",
       "score": 3.0,
       "max": 10
     }
@@ -81,8 +81,8 @@
       "cls": "dn"
     },
     {
-      "lbl": "Dow / Nasdaq fut",
-      "val": "−0.3% / −1.7%",
+      "lbl": "Dow / Nasdaq Comp",
+      "val": "~+0.1% / ~−1.5%",
       "delta": "global chip selloff hits tech",
       "cls": "dn"
     },
@@ -93,33 +93,33 @@
       "cls": "warn"
     },
     {
-      "lbl": "Russell 2000 fut",
-      "val": "−~1.1%",
-      "delta": "risk-off · cautious pre-PCE",
-      "cls": "dn"
+      "lbl": "Russell 2000",
+      "val": "~3,004 (Mon close)",
+      "delta": "first-ever close above 3,000 · cautious pre-PCE",
+      "cls": "warn"
     },
     {
       "lbl": "WTI · Brent",
-      "val": "~$73 · ~$78",
-      "delta": "↓ ~1% · Iran 60-day roadmap",
+      "val": "~$74 · ~$78",
+      "delta": "↓ ~2.4% · Iran 60-day sales license",
       "cls": "dn"
     },
     {
       "lbl": "10Y Treasury",
-      "val": "~4.50%",
-      "delta": "firm · hawkish-Fed hangover",
+      "val": "~4.48–4.50%",
+      "delta": "firm · hawkish-Fed hangover, Sep hike ~68%",
       "cls": "warn"
     },
     {
       "lbl": "Gold",
-      "val": "~$4,140",
-      "delta": "−1.4% · easing as oil falls",
+      "val": "~$4,140 (below $4,150)",
+      "delta": "−1.4% · easing on rate-hike bets",
       "cls": "dn"
     },
     {
       "lbl": "SpaceX (SPCX)",
-      "val": "~$147 (−5%)",
-      "delta": "3rd down day · bond sale · ineligible",
+      "val": "~$150 (−~4%)",
+      "delta": "4th down day · below IPO open · ineligible",
       "cls": "dn"
     }
   ],
@@ -131,7 +131,7 @@
       "type_label": "Type B",
       "grade": "B",
       "grade_label": "Grade B",
-      "read": "Best idea. Oil is sliding toward $73 on the Iran 60-day roadmap, Hormuz/supply hopes, and Gulf producers ramping output — that caps the whole group. Real, durable news, but it's pre-PCE, so trade half size.",
+      "read": "Best idea. Oil is sliding toward $73–74 on the Iran 60-day roadmap, the new 60-day oil-sales license, Hormuz traffic recovering, and Gulf producers ramping output — that caps the whole group. Real, durable news, but it's pre-PCE, so trade half size.",
       "val": "pending",
       "val_label": "PENDING · ½ size"
     },
@@ -142,20 +142,9 @@
       "type_label": "Type B (weak)",
       "grade": "C",
       "grade_label": "Grade C",
-      "read": "Falling hard on a global chip rout (KOSPI −10%, Samsung/SK Hynix −12%) after a historic run, but that's momentum, not a clean U.S. catalyst. Micron (MU) reports Wednesday — earnings risk inside the window. Don't short into it. Wait.",
+      "read": "Falling hard on a global chip rout (Micron −11%, Qualcomm/Arm −8%+, SMH −6%+) after a historic run, but that's momentum, not a clean U.S. catalyst. Micron (MU) reports Wednesday night — earnings risk inside the window. Don't short into it. Wait.",
       "val": "watch",
       "val_label": "WATCH"
-    },
-    {
-      "ticker": "FedEx (FDX)",
-      "bias": "",
-      "bias_label": "",
-      "type_label": "Type A (pending)",
-      "grade": "",
-      "grade_label": "Invalid",
-      "read": "Reports AMC tonight — earnings risk is in front of it, not behind it. A spread now would straddle the print (~7% implied move). Can't use it until the gap is set; revisit tomorrow as a possible Type A.",
-      "val": "invalid",
-      "val_label": "INELIGIBLE"
     },
     {
       "ticker": "Industrials & Financials",
@@ -164,9 +153,20 @@
       "type_label": "Type B (rotation)",
       "grade": "C",
       "grade_label": "Grade C",
-      "read": "Yesterday's leaders with banks up ~2%, but it's broad rotation with no single news story, and a global risk-off wave plus a hawkish Fed could reverse it fast. Wait.",
+      "read": "Holding the Dow firmer than the broad tape (Caterpillar led Monday +~4%), but it's broad rotation with no single news story, and a global risk-off wave plus a hawkish Fed could reverse it fast. Wait.",
       "val": "watch",
       "val_label": "WATCH"
+    },
+    {
+      "ticker": "Micron (MU)",
+      "bias": "",
+      "bias_label": "",
+      "type_label": "Type A (pending)",
+      "grade": "",
+      "grade_label": "Invalid",
+      "read": "Reports AMC Wednesday — earnings risk is in front of it, not behind it, and the stock is already down ~11% today on the chip rout. A spread now would straddle the print. Can't use it until the gap is set; revisit Thursday as a possible Type A.",
+      "val": "invalid",
+      "val_label": "INELIGIBLE"
     },
     {
       "ticker": "SpaceX (SPCX)",
@@ -175,7 +175,7 @@
       "type_label": "",
       "grade": "",
       "grade_label": "",
-      "read": "Newly public, ultra-volatile (down a 3rd straight day toward ~$147 on a $20B+ bond sale): no real options history, no stable support, wild swings. Can't use it.",
+      "read": "Newly public, ultra-volatile (down a 4th straight day toward ~$150, below its IPO open, after a $20B+ bond sale): no real options history, no stable support, wild swings. Can't use it.",
       "val": "invalid",
       "val_label": "INELIGIBLE"
     }
@@ -198,17 +198,16 @@
     },
     {
       "label": "Surprise — Iran stumbles or a shock hits",
-      "sub": "The 60-day roadmap breaks down, FedEx shocks, or a hot data point lands → oil and volatility jump",
+      "sub": "The 60-day roadmap breaks down, Micron shocks, or a hot data point lands → oil and volatility jump",
       "prob": 6
     }
   ],
   "risks": [
-    "<strong>Core PCE inflation · Thu 6/25 8:30 AM</strong> — the Fed's favorite inflation gauge; with inflation at a three-year high, a hot print could push yields and 2026 hike odds higher.",
-    "<strong>Global chip selloff</strong> — KOSPI crashed ~10% with Samsung and SK Hynix down 12%+; that overheated-AI fear is bleeding into U.S. semis (NVDA, AVGO, MU). Don't short the group on momentum alone.",
-    "<strong>FedEx (FDX) earnings tonight</strong> — first report since the Freight spin-off, with a ~7% implied move; don't sell spreads on FDX into the print.",
-    "<strong>Micron (MU) earnings Wednesday</strong> — adds gap risk to the whole memory/semi complex inside a spread's window.",
-    "<strong>Hike fears · short end firm</strong> — markets price a possible 2026 Fed hike with the 10-year near 4.5%; growth and tech can drop fast if yields keep climbing.",
-    "<strong>Iran deal not signed yet</strong> — it's a 60-day roadmap, and Iran says the Strait of Hormuz \"will never return\" to pre-war terms; oil could whipsaw on any setback."
+    "<strong>Core PCE inflation · Thu 6/25 8:30 AM</strong> — the Fed's favorite inflation gauge; with the Fed turning hawkish, a hot print could push yields and 2026 hike odds higher.",
+    "<strong>Global chip selloff</strong> — Asian and European semis crashed and U.S. names followed (Micron −11%, Qualcomm/Arm −8%+, SMH −6%+); that overheated-AI fear is bleeding into the whole group. Don't short on momentum alone.",
+    "<strong>Micron (MU) earnings Wednesday night</strong> — adds gap risk to the whole memory/semi complex inside a spread's window; the stock is already down sharply today.",
+    "<strong>Hike fears · short end firm</strong> — markets now price a possible September Fed hike (~68% odds) with the 10-year near 4.5%; growth and tech can drop fast if yields keep climbing.",
+    "<strong>Iran deal not signed yet</strong> — it's a 60-day roadmap, and tensions over Lebanon and Hormuz persist; oil could whipsaw on any setback over the long weekend."
   ],
   "yesterday": {
     "col_prior": "Mon 6/22 (first session back)",
@@ -217,42 +216,42 @@
       {
         "dim": "Composite Gap-Risk Score",
         "prior": "41 (MILD)",
-        "today": "46 (MILD)",
-        "delta": "+5 · global chip selloff",
+        "today": "47 (MILD)",
+        "delta": "+6 · global chip selloff",
         "cls": "up"
       },
       {
         "dim": "P(≥1% gap)",
         "prior": "22%",
-        "today": "27%",
-        "delta": "+5 pts (risk-off open)",
+        "today": "28%",
+        "delta": "+6 pts (risk-off open)",
         "cls": "up"
       },
       {
         "dim": "VIX",
-        "prior": "~16.4 (easing)",
+        "prior": "~16.8 (Mon, eased)",
         "today": "~17.3 (+3%, ticking up)",
-        "delta": "+0.9 · firming",
+        "delta": "+0.5 · firming",
         "cls": "up"
       },
       {
         "dim": "Tape",
-        "prior": "Mixed: Dow +0.44% / Nasdaq −0.27% / RUT +2.1%",
+        "prior": "Mixed: Dow +0.29% / Nasdaq −1.32% / RUT +0.83%",
         "today": "Risk-off: tech-led drop, chip rout global",
         "delta": "rotation → risk-off",
         "cls": "nt"
       },
       {
         "dim": "WTI crude",
-        "prior": "~$74 (−1 to −2%)",
-        "today": "~$73 (−1%)",
+        "prior": "~$74 (settled −3%+)",
+        "today": "~$74 (−2.4%)",
         "delta": "still easing",
         "cls": "dn"
       },
       {
         "dim": "Dominant catalyst",
-        "prior": "Iran 60-day roadmap + AbbVie–Apogee M&amp;A",
-        "today": "Global chip selloff (KOSPI −10%); FedEx tonight; PCE Thu",
+        "prior": "Iran 60-day roadmap + megacap-tech profit-taking",
+        "today": "Global chip selloff; Micron tomorrow; PCE Thu",
         "delta": "data watch → chip rout",
         "cls": "nt"
       },
