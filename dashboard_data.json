@@ -1,126 +1,126 @@
 {
   "meta": {
-    "subtitle": "Plain-English market read · Gap-risk check · Global chip selloff hits Wall Street · PCE Thursday",
-    "stamp": "Tue · Jun 23, 2026",
-    "snapshot_label": "Tue 6/23",
-    "rerun_note": "Core PCE inflation report Thu 6/25 8:30 AM · re-run after · Micron earnings tonight"
+    "subtitle": "Plain-English market read · Gap-risk check · Micron earnings tonight · PCE tomorrow",
+    "stamp": "Wed · Jun 24, 2026",
+    "snapshot_label": "Wed 6/24",
+    "rerun_note": "Micron (MU) earnings tonight AMC · re-run after · Core PCE Thu 6/25 8:30 AM"
   },
   "verdict": {
     "color": "YELLOW",
     "label": "YELLOW · Trade small or sit out",
-    "desc": "A global chip selloff is hitting the tape today: <strong>Asian and European semiconductors cratered — South Korea's Kospi slid sharply and Micron, Qualcomm and Arm are all down 8%+ in the U.S.</strong> as investors dump AI/chip names. The Nasdaq-100 is off nearly 3% and the S&P 500 is lower. Oil keeps sliding toward $73–74 on Iran peace progress, and volatility is creeping up (VIX ~17.3). On top of that, <strong>Micron reports tomorrow and Thursday's Core PCE inflation report is the week's big test</strong>. <strong>Take one small, well-supported trade at most, or wait for the inflation read.</strong>"
+    "desc": "Two big unknowns sit dead ahead. <strong>Micron reports earnings after the close tonight — the key read on whether the AI/memory-chip selloff keeps going</strong> — and <strong>Thursday's Core PCE inflation report (8:30 AM) is the week's main event.</strong> Markets are trying to steady after Tuesday's global chip rout: futures are mixed-to-slightly-higher and Micron is bouncing a bit pre-market. But volatility is still elevated (VIX ~19.5), the Fed has turned hawkish with hike bets rising, and oil keeps sliding below $72. <strong>Take one small, well-supported trade at most, or wait for tonight's print and tomorrow's inflation read.</strong>"
   },
   "composite": {
-    "score": 47,
+    "score": 49,
     "band": "MILD",
-    "band_note": "MILD · up from 41 · global chip rout + PCE ahead"
+    "band_note": "MILD · up from 47 · Micron tonight + PCE tomorrow"
   },
   "gap": {
-    "pct": 28,
+    "pct": 30,
     "trigger": 35,
-    "band_note": "Below the danger line · rising on the chip rout; the bigger risk is Thursday's PCE"
+    "band_note": "Below the danger line · rising into Micron earnings and Thursday's PCE"
   },
   "focus": {
-    "jbig": "Global chip selloff · hawkish-Fed hangover",
-    "jtag": "Asia chips crash, U.S. semis follow; oil falls; PCE lands Thursday",
+    "jbig": "Micron earnings tonight · PCE tomorrow",
+    "jtag": "Chip rout tries to stabilize; Micron reports AMC; Core PCE lands Thursday",
     "jstats": [
       {
         "l": "Fed funds",
-        "v": "3.50–3.75% (held) · markets eye a 2026 HIKE"
+        "v": "3.50–3.75% (held) · markets eye 2026 HIKE (~68% Sep)"
       },
       {
-        "l": "Dow / Nasdaq Comp",
-        "v": "~+0.1% / ~−1.5% (tech-led drop)"
+        "l": "Dow / Nasdaq",
+        "v": "futures mixed · steadying after −2.2% Nasdaq rout"
       },
       {
         "l": "VIX",
-        "v": "~17.3 (+3%, ticking up)"
+        "v": "~19.5 (elevated, off the lows)"
       },
       {
         "l": "WTI crude",
-        "v": "~$74 (−2.4%)"
+        "v": "~$72 (3-month low)"
       }
     ],
-    "jnote": "<strong>Today is a jittery \"wait for the data\" day.</strong> The big story is in chips: <strong>Asian and European semiconductors got hammered overnight and U.S. names followed — Micron fell about 11%, Qualcomm and Arm dropped roughly 8%, and the chip ETF SMH slid more than 6%</strong>. That selloff is dragging the Nasdaq lower while the Dow holds up better. <strong>Oil keeps sliding toward $73–74 on the U.S.–Iran 60-day roadmap and a 60-day license letting Iran sell oil</strong>, but last week's hawkish Fed still hangs over everything — <strong>traders now price a possible September rate hike (~68% odds) with the 10-year near 4.5%</strong>. <strong>Micron reports after the close tomorrow</strong> and <strong>Core PCE inflation lands Thursday</strong>, so size down.",
-    "notdown": "Industrials and financials held the Dow firmer than the broad tape, but that's rotation, not a single named catalyst, and a global risk-off wave could reverse it fast. Low grade.",
-    "notup": "<strong>Energy (XLE, XOM, CVX, OXY)</strong> stays the cleaner bearish read: oil is sliding toward $73–74 on the Iran 60-day roadmap, the new sales license, and Gulf producers ramping output. Real, durable news. <strong>Semis (SMH, NVDA, AVGO, MU)</strong> are dropping hard on the global chip rout — but shorting a fast-falling group on pure momentum into Micron earnings is risky. Energy half size; semis watch only.",
-    "why": "<strong class=\"why\">Why YELLOW and not GREEN?</strong> The gap-risk numbers (47 and 28%) are still calm enough for a green light on paper — but three rules apply: <em>respect a fresh policy shock</em> (the Fed just flipped from cuts to possible hikes), <em>don't short a fast-falling market on pure momentum</em>, and <em>don't go full size right before a major inflation print.</em> <strong>Core PCE lands Thursday 8:30 AM</strong> and <strong>Micron reports tomorrow night.</strong> Take one small, well-supported trade if it checks out at 9:35 AM, or wait. A cleaner read returns after PCE."
+    "jnote": "<strong>Today is a \"wait for the data\" day.</strong> Tuesday's <strong>global chip selloff</strong> (Micron −13%, Qualcomm −8%, Nasdaq −2.2%) is trying to stabilize — <strong>Micron and Sandisk bounced about 1% pre-market and South Korea's Kospi rebounded</strong> — but the all-clear isn't here. <strong>Micron reports after the close tonight</strong>, the single biggest read on AI/memory demand, and <strong>Core PCE inflation lands Thursday at 8:30 AM</strong>. Oil keeps sliding below $72 on the Iran peace roadmap and reopening Hormuz, easing inflation worry, but a hawkish Fed and rising hike odds keep yields firm near 4.5%. <strong>Note: Alphabet joins the Dow before Monday's open</strong> — a structural change, not a trade. Size down.",
+    "notdown": "Defensives and large-cap tech outside chips (Walmart, J&J, Microsoft, Amazon) held up Tuesday as money rotated to safety, but that's a flight-to-quality move with no single named catalyst, and it could reverse fast if the chip rout deepens. Low grade.",
+    "notup": "<strong>Energy (XLE, XOM, CVX, OXY)</strong> stays the cleaner bearish read: oil is sliding below $72 toward 3-month lows on the Iran 60-day roadmap, the new oil-sales license, and recovering Hormuz traffic — that caps the whole group. Real, durable news. <strong>Semis (SMH, NVDA, MU)</strong> are still falling, but shorting a fast-dropping group on pure momentum into Micron's earnings tonight is risky. Energy half size; semis watch only.",
+    "why": "<strong class=\"why\">Why YELLOW and not GREEN?</strong> The gap-risk numbers (49 and 30%) are still calm enough for a green light on paper — but three rules apply: <em>don't go full size right before a major inflation print</em> (Core PCE is Thursday 8:30 AM), <em>respect a fresh policy shock</em> (the Fed just flipped from cuts to possible hikes), and <em>don't short a fast-falling market on pure momentum.</em> <strong>Micron reports tonight after the close</strong> and adds earnings gap-risk to the whole memory complex. Take one small, well-supported trade if it checks out at 9:35 AM, or wait. A cleaner read returns after PCE."
   },
   "how_built": [
     {
-      "name": "Volatility — VIX <strong>~17.3</strong>, calm but ticking up on the chip rout",
-      "score": 8.0,
+      "name": "Volatility — VIX <strong>~19.5</strong>, elevated and off its lows after the chip rout",
+      "score": 11.0,
       "max": 25
     },
     {
-      "name": "Big events (next 1–3 days) — <strong>Core PCE Thursday</strong> + Micron earnings tomorrow night + flash PMIs",
-      "score": 18.0,
+      "name": "Big events (next 1–3 days) — <strong>Micron earnings TONIGHT</strong> + <strong>Core PCE Thursday</strong> + final Q1 GDP",
+      "score": 20.0,
       "max": 30
     },
     {
-      "name": "World risk — <strong>global chip selloff</strong>; Iran roadmap calming, but no signed deal yet",
-      "score": 11.0,
+      "name": "World risk — chip-rout aftershock fading; Iran roadmap calming, but no signed final deal yet",
+      "score": 10.0,
       "max": 20
     },
     {
-      "name": "Volatility trend — ticking back up after easing post-Fed (estimated)",
-      "score": 7.0,
+      "name": "Volatility trend — still firm after Tuesday's spike (estimated)",
+      "score": 5.0,
       "max": 15
     },
     {
-      "name": "Commodities — <strong>oil down ~2.4%</strong>, which is calming for inflation, not scary",
+      "name": "Commodities — <strong>oil down toward $72</strong>, calming for inflation, not scary",
       "score": 3.0,
       "max": 10
     }
   ],
   "snapshot": [
     {
-      "lbl": "SPX (Mon close)",
-      "val": "7,472.79",
-      "delta": "−0.37% Mon · soft today on chips",
+      "lbl": "SPX (Tue close)",
+      "val": "7,365.46",
+      "delta": "−1.44% Tue · futures steadier today",
       "cls": "dn"
     },
     {
       "lbl": "Dow / Nasdaq Comp",
-      "val": "~+0.1% / ~−1.5%",
-      "delta": "global chip selloff hits tech",
+      "val": "51,666.84 / 25,587.04",
+      "delta": "Dow −0.09% / Nasdaq −2.21% Tue",
       "cls": "dn"
     },
     {
       "lbl": "VIX",
-      "val": "~17.3",
-      "delta": "+3% · ticking up on chip rout",
+      "val": "~19.5",
+      "delta": "elevated · off the lows post-rout",
       "cls": "warn"
     },
     {
       "lbl": "Russell 2000",
-      "val": "~3,004 (Mon close)",
-      "delta": "first-ever close above 3,000 · cautious pre-PCE",
+      "val": "~3,004 (recent close)",
+      "delta": "first close above 3,000 · cautious pre-PCE",
       "cls": "warn"
     },
     {
       "lbl": "WTI · Brent",
-      "val": "~$74 · ~$78",
-      "delta": "↓ ~2.4% · Iran 60-day sales license",
+      "val": "~$72 · ~$77",
+      "delta": "↓ · 3-month low · Hormuz reopening",
       "cls": "dn"
     },
     {
       "lbl": "10Y Treasury",
-      "val": "~4.48–4.50%",
-      "delta": "firm · hawkish-Fed hangover, Sep hike ~68%",
+      "val": "~4.49–4.50%",
+      "delta": "firm · hawkish-Fed, Sep hike ~68%",
       "cls": "warn"
     },
     {
       "lbl": "Gold",
-      "val": "~$4,140 (below $4,150)",
-      "delta": "−1.4% · easing on rate-hike bets",
+      "val": "below $4,100",
+      "delta": "↓ · 7-month lows on rate-hike bets",
       "cls": "dn"
     },
     {
       "lbl": "SpaceX (SPCX)",
-      "val": "~$150 (−~4%)",
-      "delta": "4th down day · below IPO open · ineligible",
-      "cls": "dn"
+      "val": "~$165 (+~1%)",
+      "delta": "bounce after $25B bond sale · ineligible",
+      "cls": "up"
     }
   ],
   "setups": [
@@ -131,31 +131,9 @@
       "type_label": "Type B",
       "grade": "B",
       "grade_label": "Grade B",
-      "read": "Best idea. Oil is sliding toward $73–74 on the Iran 60-day roadmap, the new 60-day oil-sales license, Hormuz traffic recovering, and Gulf producers ramping output — that caps the whole group. Real, durable news, but it's pre-PCE, so trade half size.",
+      "read": "Best idea. Oil is sliding below $72 toward 3-month lows on the Iran 60-day roadmap, the new oil-sales license, and recovering Hormuz traffic — that caps the whole group. Real, durable news, but it's pre-PCE, so trade half size.",
       "val": "pending",
       "val_label": "PENDING · ½ size"
-    },
-    {
-      "ticker": "Semis · SMH/NVDA/AVGO/MU",
-      "bias": "bear",
-      "bias_label": "Bear call",
-      "type_label": "Type B (weak)",
-      "grade": "C",
-      "grade_label": "Grade C",
-      "read": "Falling hard on a global chip rout (Micron −11%, Qualcomm/Arm −8%+, SMH −6%+) after a historic run, but that's momentum, not a clean U.S. catalyst. Micron (MU) reports Wednesday night — earnings risk inside the window. Don't short into it. Wait.",
-      "val": "watch",
-      "val_label": "WATCH"
-    },
-    {
-      "ticker": "Industrials & Financials",
-      "bias": "bull",
-      "bias_label": "Bull put",
-      "type_label": "Type B (rotation)",
-      "grade": "C",
-      "grade_label": "Grade C",
-      "read": "Holding the Dow firmer than the broad tape (Caterpillar led Monday +~4%), but it's broad rotation with no single news story, and a global risk-off wave plus a hawkish Fed could reverse it fast. Wait.",
-      "val": "watch",
-      "val_label": "WATCH"
     },
     {
       "ticker": "Micron (MU)",
@@ -164,9 +142,31 @@
       "type_label": "Type A (pending)",
       "grade": "",
       "grade_label": "Invalid",
-      "read": "Reports AMC Wednesday — earnings risk is in front of it, not behind it, and the stock is already down ~11% today on the chip rout. A spread now would straddle the print. Can't use it until the gap is set; revisit Thursday as a possible Type A.",
+      "read": "Reports AMC TONIGHT — earnings risk is in front of it, not behind it, and the stock just fell ~13% on the chip rout. A spread now would straddle the print. Can't use it until the gap is set; revisit Thursday as a possible Type A.",
       "val": "invalid",
       "val_label": "INELIGIBLE"
+    },
+    {
+      "ticker": "Semis · SMH/NVDA/AVGO",
+      "bias": "bear",
+      "bias_label": "Bear call",
+      "type_label": "Type B (weak)",
+      "grade": "C",
+      "grade_label": "Grade C",
+      "read": "Fell hard on the global chip rout but trying to stabilize (Micron/Sandisk bounced ~1% pre-market). That's momentum, not a clean U.S. catalyst, and Micron earnings tonight sit inside the window. Don't short into it. Wait.",
+      "val": "watch",
+      "val_label": "WATCH"
+    },
+    {
+      "ticker": "Defensives & big tech ex-chips",
+      "bias": "bull",
+      "bias_label": "Bull put",
+      "type_label": "Type B (rotation)",
+      "grade": "C",
+      "grade_label": "Grade C",
+      "read": "Walmart, J&J, Microsoft, Amazon held up Tuesday as money fled to safety, but it's broad flight-to-quality with no single news story, and it could reverse fast on a hot PCE. Wait.",
+      "val": "watch",
+      "val_label": "WATCH"
     },
     {
       "ticker": "SpaceX (SPCX)",
@@ -175,91 +175,91 @@
       "type_label": "",
       "grade": "",
       "grade_label": "",
-      "read": "Newly public, ultra-volatile (down a 4th straight day toward ~$150, below its IPO open, after a $20B+ bond sale): no real options history, no stable support, wild swings. Can't use it.",
+      "read": "Newly public, ultra-volatile (~$165, ~25% off its post-IPO peak, just issued $25B in bonds a week after IPO): no real options history, no stable support, wild swings. Can't use it.",
       "val": "invalid",
       "val_label": "INELIGIBLE"
     }
   ],
   "scenarios": [
     {
-      "label": "Most likely — Choppy, tech-heavy digestion ahead of PCE",
-      "sub": "Chip selloff weighs on the Nasdaq; Dow steadier; everyone waits for Thursday's inflation read",
+      "label": "Most likely — Choppy stabilization, then wait for Micron & PCE",
+      "sub": "Chip rout cools but doesn't reverse; everyone waits for tonight's Micron print and Thursday's inflation read",
       "prob": 45
     },
     {
-      "label": "Bad case — Chip rout deepens, tech rolls over",
-      "sub": "The global semi selloff feeds U.S. tech and hike fears stick → broad risk-off, Nasdaq leads down",
-      "prob": 28
+      "label": "Good case — Micron reassures, dip-buyers step in",
+      "sub": "A solid Micron report + cheaper oil easing inflation worry → relief bounce in chips and tech",
+      "prob": 22
     },
     {
-      "label": "Good case — Dip-buyers step in, oil keeps falling",
-      "sub": "Chip washout is treated as healthy; cheaper oil eases inflation worry → relief bounce",
-      "prob": 21
+      "label": "Bad case — Chip rout resumes, tech rolls over",
+      "sub": "Weak Micron guidance or hike fears stick → broad risk-off, Nasdaq leads down again",
+      "prob": 27
     },
     {
       "label": "Surprise — Iran stumbles or a shock hits",
-      "sub": "The 60-day roadmap breaks down, Micron shocks, or a hot data point lands → oil and volatility jump",
+      "sub": "The 60-day roadmap breaks down or a hot data point lands → oil and volatility jump",
       "prob": 6
     }
   ],
   "risks": [
+    "<strong>Micron (MU) earnings · tonight AMC</strong> — the key read on AI/memory demand after Tuesday's chip rout; a weak guide could reignite the whole semi selloff inside a spread's window.",
     "<strong>Core PCE inflation · Thu 6/25 8:30 AM</strong> — the Fed's favorite inflation gauge; with the Fed turning hawkish, a hot print could push yields and 2026 hike odds higher.",
-    "<strong>Global chip selloff</strong> — Asian and European semis crashed and U.S. names followed (Micron −11%, Qualcomm/Arm −8%+, SMH −6%+); that overheated-AI fear is bleeding into the whole group. Don't short on momentum alone.",
-    "<strong>Micron (MU) earnings Wednesday night</strong> — adds gap risk to the whole memory/semi complex inside a spread's window; the stock is already down sharply today.",
-    "<strong>Hike fears · short end firm</strong> — markets now price a possible September Fed hike (~68% odds) with the 10-year near 4.5%; growth and tech can drop fast if yields keep climbing.",
-    "<strong>Iran deal not signed yet</strong> — it's a 60-day roadmap, and tensions over Lebanon and Hormuz persist; oil could whipsaw on any setback over the long weekend."
+    "<strong>Hike fears · short end firm</strong> — markets price a possible September Fed hike (~68% odds, up from ~29% last week) with the 10-year near 4.5%; growth and tech can drop fast if yields keep climbing.",
+    "<strong>Chip rout aftershock</strong> — Tuesday's global semi selloff (Micron −13%, Qualcomm −8%, Nasdaq −2.2%) is only trying to stabilize; don't short on momentum alone.",
+    "<strong>Iran deal not signed yet</strong> — it's a 60-day roadmap with disputes over nuclear inspectors and Hormuz transit fees persisting; oil could whipsaw on any setback."
   ],
   "yesterday": {
-    "col_prior": "Mon 6/22 (first session back)",
-    "col_today": "Tue 6/23 (global chip rout · PCE eve)",
+    "col_prior": "Tue 6/23 (global chip rout · PCE eve)",
+    "col_today": "Wed 6/24 (Micron night · PCE eve)",
     "rows": [
       {
         "dim": "Composite Gap-Risk Score",
-        "prior": "41 (MILD)",
-        "today": "47 (MILD)",
-        "delta": "+6 · global chip selloff",
+        "prior": "47 (MILD)",
+        "today": "49 (MILD)",
+        "delta": "+2 · earnings + PCE inside window",
         "cls": "up"
       },
       {
         "dim": "P(≥1% gap)",
-        "prior": "22%",
-        "today": "28%",
-        "delta": "+6 pts (risk-off open)",
+        "prior": "28%",
+        "today": "30%",
+        "delta": "+2 pts (pre-earnings/PCE)",
         "cls": "up"
       },
       {
         "dim": "VIX",
-        "prior": "~16.8 (Mon, eased)",
-        "today": "~17.3 (+3%, ticking up)",
-        "delta": "+0.5 · firming",
+        "prior": "~17.3 (+3%)",
+        "today": "~19.5 (elevated)",
+        "delta": "+2.2 · jumped on the rout",
         "cls": "up"
       },
       {
         "dim": "Tape",
-        "prior": "Mixed: Dow +0.29% / Nasdaq −1.32% / RUT +0.83%",
-        "today": "Risk-off: tech-led drop, chip rout global",
-        "delta": "rotation → risk-off",
+        "prior": "Risk-off: tech-led drop, chip rout global",
+        "today": "Trying to stabilize: futures mixed, MU bounces ~1%",
+        "delta": "rout → steadying",
         "cls": "nt"
       },
       {
         "dim": "WTI crude",
-        "prior": "~$74 (settled −3%+)",
-        "today": "~$74 (−2.4%)",
+        "prior": "~$74 (−2.4%)",
+        "today": "~$72 (3-month low)",
         "delta": "still easing",
         "cls": "dn"
       },
       {
         "dim": "Dominant catalyst",
-        "prior": "Iran 60-day roadmap + megacap-tech profit-taking",
-        "today": "Global chip selloff; Micron tomorrow; PCE Thu",
-        "delta": "data watch → chip rout",
+        "prior": "Global chip selloff; Micron tomorrow; PCE Thu",
+        "today": "Micron earnings TONIGHT; Core PCE tomorrow",
+        "delta": "chip rout → earnings/data",
         "cls": "nt"
       },
       {
         "dim": "Sniper Verdict",
         "prior": "<span class=\"dot y\"></span>YELLOW",
         "today": "<span class=\"dot y\"></span>YELLOW",
-        "delta": "small size into PCE",
+        "delta": "small size into Micron & PCE",
         "cls": "nt"
       }
     ]
