@@ -56,7 +56,8 @@ Rules:
 - Output strictly valid JSON, starting with {{ and ending with }}.
 - Fill the "yesterday" section using the PREVIOUS session's numbers provided below.
 - Keep HTML allowed only inside the fields that already contain it in the example
-  (verdict.desc, focus.*, how_built[].name, snapshot[].val/delta, risks[], yesterday rows).
+  (verdict.desc, focus.*, how_built[].name, snapshot[].val/delta, setups[].read/check_note,
+  risks[], earnings intro/outro/rows, yesterday rows).
 - Use real, current figures from web search; if a figure can't be verified, say so in the text.
 
 PREVIOUS SESSION (for the 'yesterday' comparison):
@@ -87,7 +88,7 @@ def extract_json(text):
         raise ValueError("No JSON object found in model output")
     return json.loads(text[a:b+1])
 
-REQUIRED = ["meta","verdict","composite","gap","focus","how_built","snapshot","setups","scenarios","risks","yesterday"]
+REQUIRED = ["meta","verdict","composite","gap","focus","how_built","snapshot","setups","scenarios","risks","earnings","yesterday"]
 
 def validate(d):
     missing = [k for k in REQUIRED if k not in d]
@@ -99,6 +100,8 @@ def validate(d):
         raise ValueError("gap.pct out of range")
     if len(d["how_built"]) != 5:
         raise ValueError("how_built must have exactly 5 bars")
+    if not d["earnings"].get("rows"):
+        raise ValueError("earnings.rows must not be empty")
 
 def main():
     if not API_KEY:
