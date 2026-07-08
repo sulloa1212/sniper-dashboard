@@ -1,9 +1,10 @@
 name: Daily dashboard (generate + publish)
 
 on:
-  schedule:
-    - cron: '45 12 * * 1-5'      # ~09:00 ET weekdays (UTC). External cron-job.org also triggers this via workflow_dispatch.
-  workflow_dispatch:            # manual "Run workflow" button + external trigger
+  # Scheduling lives on cron-job.org (8:40 AM ET weekdays, DST-aware), which
+  # POSTs to this workflow's /dispatches endpoint. No GitHub schedule here so
+  # the report can never double-generate.
+  workflow_dispatch:            # manual "Run workflow" button + cron-job.org trigger
 
 permissions:
   contents: write
