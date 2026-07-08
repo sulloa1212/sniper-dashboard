@@ -76,8 +76,13 @@ PREVIOUS SESSION (for the 'yesterday' comparison):
         ENDPOINT, data=json.dumps(body).encode(),
         headers={"x-api-key": API_KEY, "anthropic-version": "2023-06-01",
                  "content-type": "application/json"})
-    with urllib.request.urlopen(req, timeout=600) as r:
-        data = json.loads(r.read())
+    try:
+        with urllib.request.urlopen(req, timeout=600) as r:
+            data = json.loads(r.read())
+    except urllib.error.HTTPError as e:
+        # Surface the API's own error message — a bare "400 Bad Request" is undebuggable.
+        print(f"Anthropic API error {e.code}: {e.read().decode(errors='replace')}", file=sys.stderr)
+        raise
     # Concatenate all text blocks (skip web_search tool blocks)
     text = "".join(b.get("text", "") for b in data.get("content", []) if b.get("type") == "text")
     return text
