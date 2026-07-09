@@ -279,6 +279,11 @@
 </head>
 <body>
 <main>
+  <!-- Retrofitted recent-reports bar (self-contained; newer archives get it from the template) -->
+  <div id="reportsNav" style="align-items:center;flex-wrap:wrap;gap:6px;margin:0 0 14px;display:none;">
+    <span style="font-size:11px;letter-spacing:.08em;text-transform:uppercase;opacity:.55;font-weight:700;margin-right:4px;">Reports</span>
+  </div>
+
   <div class="toolbar">
     <button class="btn ghost" onclick="window.print()">Print</button>
     <button class="btn" onclick="exportPNG()">Save as PNG</button>
@@ -690,6 +695,39 @@
       a.click();
     });
   }
+</script>
+<script>
+  (async function loadReportsNav() {
+    const nav = document.getElementById('reportsNav');
+    if (!nav) return;
+    try {
+      const res = await fetch('/archive/index.json', { cache: 'no-store' });
+      if (!res.ok) return;
+      const reports = await res.json();
+      if (!Array.isArray(reports) || reports.length === 0) return;
+      const here = location.pathname;
+      const onArchivePage = /\/archive\/\d{4}-\d{2}-\d{2}(\.html)?$/.test(here);
+      const style = (a, cur) => {
+        a.style.cssText = 'font-size:12px;padding:4px 12px;border-radius:999px;text-decoration:none;white-space:nowrap;'
+          + (cur ? 'font-weight:700;color:#4ea1ff;background:rgba(78,161,255,.14);border:1px solid rgba(78,161,255,.6);cursor:default;'
+                 : 'color:inherit;opacity:.8;background:rgba(128,144,168,.14);border:1px solid rgba(128,144,168,.45);');
+      };
+      const latest = document.createElement('a');
+      latest.textContent = 'Latest';
+      if (onArchivePage) latest.href = '/latest.html';
+      style(latest, !onArchivePage);
+      nav.appendChild(latest);
+      for (const r of reports.slice(0, 5)) {
+        const a = document.createElement('a');
+        a.textContent = r.label;
+        const cur = onArchivePage && here.indexOf('/' + r.date) !== -1;
+        if (!cur) a.href = '/' + r.file;
+        style(a, cur);
+        nav.appendChild(a);
+      }
+      nav.style.display = 'flex';
+    } catch (e) {}
+  })();
 </script>
 </body>
 </html>
