@@ -54,6 +54,15 @@
   main{padding:24px;max-width:1080px;margin:0 auto;}
   a{color:var(--acc);}
   .toolbar{display:flex;justify-content:flex-end;gap:8px;margin-bottom:14px;}
+  /* === Recent-reports bar (outside #shareable — never in the PNG) === */
+  .reports-nav{display:flex;align-items:center;flex-wrap:wrap;gap:6px;margin:-6px 0 14px;}
+  .reports-nav .rlabel{font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--faint);
+    font-weight:700;margin-right:4px;}
+  .reports-nav a{font-size:12px;color:var(--mut);text-decoration:none;background:var(--panel2);
+    border:1px solid var(--line);border-radius:999px;padding:4px 12px;white-space:nowrap;}
+  .reports-nav a:hover{color:var(--ink);border-color:var(--acc);}
+  .reports-nav a.current{color:#93d8ff;background:rgba(78,161,255,.14);border-color:rgba(78,161,255,.5);
+    font-weight:700;cursor:default;}
   .btn{background:linear-gradient(135deg,var(--accent),var(--accent-2));color:#fff;border:0;
     padding:10px 16px;border-radius:10px;font-weight:700;cursor:pointer;letter-spacing:.04em;
     font-size:12px;text-transform:uppercase;}
@@ -282,6 +291,12 @@
   <div class="toolbar">
     <button class="btn ghost" onclick="window.print()">Print</button>
     <button class="btn" onclick="exportPNG()">Save as PNG</button>
+  </div>
+
+  <!-- Recent reports (last 5) — filled from /archive/index.json by loadReportsNav();
+       sits OUTSIDE #shareable so it never appears in the Save-as-PNG image. -->
+  <div class="reports-nav" id="reportsNav" hidden>
+    <span class="rlabel">Reports</span>
   </div>
 
   <!-- ============================================================
@@ -690,6 +705,43 @@
       a.click();
     });
   }
+
+  // Recent-reports bar: lists the latest report + the archived last 5 from
+  // /archive/index.json (maintained by render.js on every daily run). Runs on
+  // latest.html AND on every archived copy; highlights the page being viewed.
+  // Fails silently (bar stays hidden) if the manifest isn't reachable, e.g.
+  // when the file is opened locally.
+  (async function loadReportsNav() {
+    const nav = document.getElementById('reportsNav');
+    if (!nav) return;
+    try {
+      const res = await fetch('/archive/index.json', { cache: 'no-store' });
+      if (!res.ok) return;
+      const reports = await res.json();
+      if (!Array.isArray(reports) || reports.length === 0) return;
+
+      const here = location.pathname;
+      const onArchivePage = /\/archive\/\d{4}-\d{2}-\d{2}(\.html)?$/.test(here);
+
+      const latest = document.createElement('a');
+      latest.href = '/latest.html';
+      latest.textContent = 'Latest';
+      if (!onArchivePage) { latest.classList.add('current'); latest.removeAttribute('href'); }
+      nav.appendChild(latest);
+
+      for (const r of reports.slice(0, 5)) {
+        const a = document.createElement('a');
+        a.href = '/' + r.file;
+        a.textContent = r.label;
+        if (onArchivePage && here.indexOf('/' + r.date) !== -1) {
+          a.classList.add('current');
+          a.removeAttribute('href');
+        }
+        nav.appendChild(a);
+      }
+      nav.hidden = false;
+    } catch (e) { /* keep the bar hidden */ }
+  })();
 </script>
 </body>
 </html>
