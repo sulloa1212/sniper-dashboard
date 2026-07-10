@@ -88,10 +88,23 @@ PREVIOUS SESSION (for the 'yesterday' comparison):
     return text
 
 def extract_json(text):
-    a, b = text.find("{"), text.rfind("}")
-    if a == -1 or b == -1:
+    # The model sometimes surrounds the JSON with prose or emits stray braces,
+    # so a first-{ to last-} slice is not reliable. Scan every "{" and keep the
+    # largest complete object that parses.
+    dec = json.JSONDecoder()
+    best = None
+    idx = text.find("{")
+    while idx != -1:
+        try:
+            obj, end = dec.raw_decode(text, idx)
+            if isinstance(obj, dict) and (best is None or end - idx > best[1]):
+                best = (obj, end - idx)
+        except json.JSONDecodeError:
+            pass
+        idx = text.find("{", idx + 1)
+    if best is None:
         raise ValueError("No JSON object found in model output")
-    return json.loads(text[a:b+1])
+    return best[0]
 
 REQUIRED = ["meta","verdict","composite","gap","focus","how_built","snapshot","setups","scenarios","risks","earnings","yesterday"]
 
@@ -125,6 +138,7 @@ def main():
             break
         except (ValueError, json.JSONDecodeError, KeyError) as e:
             print(f"Attempt {i}/{attempts} failed: {e}", file=sys.stderr)
+            print(f"--- model output ({len(text)} chars) ---\n{text}\n---", file=sys.stderr)
             if i == attempts:
                 raise
     json.dump(data, open("dashboard_data.json", "w", encoding="utf-8"), ensure_ascii=False, indent=2)
