@@ -114,9 +114,19 @@ def main():
     skip_if_closed()
     master = open("master_prompt.md", encoding="utf-8").read()
     prev = previous_day()
-    text = call_model(master, prev)
-    data = extract_json(text)
-    validate(data)
+    # The model occasionally emits malformed JSON; a fresh call almost always
+    # succeeds, so retry the whole generate->parse->validate cycle.
+    attempts = 3
+    for i in range(1, attempts + 1):
+        try:
+            text = call_model(master, prev)
+            data = extract_json(text)
+            validate(data)
+            break
+        except (ValueError, json.JSONDecodeError, KeyError) as e:
+            print(f"Attempt {i}/{attempts} failed: {e}", file=sys.stderr)
+            if i == attempts:
+                raise
     json.dump(data, open("dashboard_data.json", "w", encoding="utf-8"), ensure_ascii=False, indent=2)
     print("Wrote dashboard_data.json for", data["meta"].get("stamp", ny_today()))
 
