@@ -1,5 +1,10 @@
 [
   {
+    "date": "2026-07-22",
+    "file": "archive/2026-07-22.html",
+    "label": "Wed Jul 22"
+  },
+  {
     "date": "2026-07-21",
     "file": "archive/2026-07-21.html",
     "label": "Tue Jul 21"
@@ -18,10 +23,5 @@
     "date": "2026-07-16",
     "file": "archive/2026-07-16.html",
     "label": "Thu Jul 16"
-  },
-  {
-    "date": "2026-07-15",
-    "file": "archive/2026-07-15.html",
-    "label": "Wed Jul 15"
   }
 ]
