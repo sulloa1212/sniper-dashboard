@@ -42,10 +42,55 @@ def previous_day():
     except Exception:
         return None
 
-def call_model(master_prompt, prev):
+def scanner_board():
+    """Load today's sniper-scanner output (downloaded by the workflow into
+    scanner_data/). Returns the parsed board, or None to fall back to
+    web-search setups."""
+    import glob
+    files = sorted(glob.glob("scanner_data/**/sniper_universe_*.json", recursive=True))
+    if not files:
+        return None
+    try:
+        board = json.load(open(files[-1], encoding="utf-8"))
+    except Exception as e:
+        print(f"Scanner board unreadable ({e}) — falling back to web search.", file=sys.stderr)
+        return None
+    if not board.get("data_health", {}).get("safe_to_publish"):
+        # Freshness guard tripped upstream: a board built on stale data must
+        # not be published, so treat it as absent.
+        print("Scanner board marked safe_to_publish=false — falling back to web search.", file=sys.stderr)
+        return None
+    return board
+
+def scanner_prompt_section(board):
+    if board is None:
+        return """SCANNER STATUS: no verified scanner data is available today.
+Build the "setups" table from web search as before, and append " (not
+scanner-verified)" to each setup's check_note so readers know these names were
+not machine-screened."""
+    boarded = board.get("candidates", {}).get("boarded", [])
+    headline = " | ".join(board.get("coverage", {}).get("headline", []))
+    if not boarded:
+        return f"""SCANNER RESULTS (authoritative): the full-universe scanner ran
+successfully today and ZERO names met the criteria. Coverage: {headline}
+The "setups" table must reflect that: no qualifying setups today — do NOT
+invent setups from web search. Fill the setups section with a single row or
+note stating the scan found no qualifying names."""
+    return f"""SCANNER RESULTS (authoritative source for the "setups" table):
+The full-universe scanner ran successfully today. Coverage: {headline}
+Its boarded candidates are below. The "setups" table MUST contain exactly
+these tickers — all of them, no additions, no substitutions. Use web search
+only to verify current pre-market prices and to write each setup's read and
+check_note; do not second-guess the scanner's grades or biases.
+
+{json.dumps(boarded, indent=1)}"""
+
+def call_model(master_prompt, prev, board=None):
     instruction = f"""Run the analysis in the master prompt below using live web search for
 today's real market data. Then output ONLY a single JSON object for the dashboard — no
 prose, no markdown fences, nothing else.
+
+{scanner_prompt_section(board)}
 
 The JSON MUST match this exact structure and field names (this is an example with last
 session's data; replace every value with today's):
@@ -127,12 +172,14 @@ def main():
     skip_if_closed()
     master = open("master_prompt.md", encoding="utf-8").read()
     prev = previous_day()
+    board = scanner_board()
+    print("Scanner board:", "loaded" if board else "unavailable — web-search fallback")
     # The model occasionally emits malformed JSON; a fresh call almost always
     # succeeds, so retry the whole generate->parse->validate cycle.
     attempts = 3
     for i in range(1, attempts + 1):
         try:
-            text = call_model(master, prev)
+            text = call_model(master, prev, board)
             data = extract_json(text)
             validate(data)
             break

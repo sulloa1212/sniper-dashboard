@@ -23,6 +23,34 @@ jobs:
       - name: Install Python dependencies
         run: pip install jinja2
 
+      # ---- Pull today's scanner board from the sniper-scanner repo ----
+      # Non-fatal by design: if the scanner didn't run, failed, or the token is
+      # missing, generate.py falls back to web-search setups (marked as not
+      # scanner-verified). Only a run created TODAY is accepted — yesterday's
+      # board must never masquerade as today's.
+      - name: Fetch scanner board (non-fatal)
+        env:
+          GH_TOKEN: ${{ secrets.SCANNER_TOKEN }}
+        run: |
+          set +e
+          if [ -z "$GH_TOKEN" ]; then
+            echo "SCANNER_TOKEN not set — skipping scanner fetch."
+            exit 0
+          fi
+          TODAY=$(date -u +%Y-%m-%d)
+          RUN_ID=$(gh run list --repo sulloa1212/sniper-scanner \
+            --workflow daily-scan.yml --status success --limit 5 \
+            --json databaseId,createdAt \
+            -q "[.[] | select(.createdAt >= \"$TODAY\")][0].databaseId")
+          if [ -z "$RUN_ID" ]; then
+            echo "No successful scanner run from today — falling back to web search."
+            exit 0
+          fi
+          gh run download "$RUN_ID" --repo sulloa1212/sniper-scanner --dir scanner_data \
+            || echo "Artifact download failed — falling back to web search."
+          ls -R scanner_data 2>/dev/null || true
+          exit 0
+
       - name: Generate today's data (Anthropic API + web search)
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
