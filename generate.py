@@ -120,7 +120,7 @@ PREVIOUS SESSION (for the 'yesterday' comparison):
 """
     body = {
         "model": MODEL,
-        "max_tokens": 8000,
+        "max_tokens": 16000,   # 8000 truncated a wordy report mid-JSON on 2026-07-27
         "messages": [{"role": "user", "content": instruction}],
         "tools": [{"type": "web_search_20250305", "name": "web_search"}],
     }
