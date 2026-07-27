@@ -78,10 +78,17 @@ invent setups from web search. Fill the setups section with a single row or
 note stating the scan found no qualifying names."""
     return f"""SCANNER RESULTS (authoritative source for the "setups" table):
 The full-universe scanner ran successfully today. Coverage: {headline}
-Its boarded candidates are below. The "setups" table MUST contain exactly
-these tickers — all of them, no additions, no substitutions. Use web search
-only to verify current pre-market prices and to write each setup's read and
-check_note; do not second-guess the scanner's grades or biases.
+Its boarded candidates are below. HARD RULES for the "setups" table — these
+override anything the master prompt says about selecting setups:
+1. EVERY boarded ticker below gets its own row. Never drop one — not because
+   its catalyst is days old, not because you disagree with it. If you have a
+   concern, express it in that row's read/check_note, not by omission.
+2. Copy each candidate's grade and bias VERBATIM. Do not upgrade, downgrade,
+   or re-bias.
+3. Do NOT add any other single-name or sector/ETF rows. The only extra rows
+   allowed are one "EMPTY" placeholder per setup type with zero boarded names.
+4. Use web search only for current pre-market prices and to write each row's
+   read and check_note.
 
 {json.dumps(boarded, indent=1)}"""
 
@@ -153,7 +160,7 @@ def extract_json(text):
 
 REQUIRED = ["meta","verdict","composite","gap","focus","how_built","snapshot","setups","scenarios","risks","earnings","yesterday"]
 
-def validate(d):
+def validate(d, board=None):
     missing = [k for k in REQUIRED if k not in d]
     if missing:
         raise ValueError(f"Missing required sections: {missing}")
@@ -165,6 +172,15 @@ def validate(d):
         raise ValueError("how_built must have exactly 5 bars")
     if not d["earnings"].get("rows"):
         raise ValueError("earnings.rows must not be empty")
+    # When the scanner board is authoritative, every boarded ticker must have
+    # made it into the setups table — the model must not drop candidates.
+    if board:
+        setups_text = " ".join(str(s.get("ticker", "")) for s in d.get("setups", [])).upper()
+        boarded = [c.get("ticker", "").upper() for c in board.get("candidates", {}).get("boarded", [])]
+        import re as _re
+        dropped = [t for t in boarded if t and not _re.search(rf"\b{_re.escape(t)}\b", setups_text)]
+        if dropped:
+            raise ValueError(f"Setups table is missing scanner candidates: {dropped}")
 
 def main():
     if not API_KEY:
@@ -181,7 +197,7 @@ def main():
         try:
             text = call_model(master, prev, board)
             data = extract_json(text)
-            validate(data)
+            validate(data, board)
             break
         except (ValueError, json.JSONDecodeError, KeyError) as e:
             print(f"Attempt {i}/{attempts} failed: {e}", file=sys.stderr)
