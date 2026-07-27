@@ -1,9 +1,10 @@
 name: Daily dashboard (generate + publish)
 
 on:
-  # Scheduling lives on cron-job.org (8:40 AM ET weekdays, DST-aware), which
-  # POSTs to this workflow's /dispatches endpoint. No GitHub schedule here so
-  # the report can never double-generate.
+  # Scheduling lives on cron-job.org (8:30 AM ET weekdays, DST-aware), which
+  # POSTs to this workflow's /dispatches endpoint. The scanner is triggered at
+  # 8:15 ET so its board is waiting; the report is live by ~8:45. No GitHub
+  # schedule here so the report can never double-generate.
   workflow_dispatch:            # manual "Run workflow" button + cron-job.org trigger
     inputs:
       skip_scanner:
