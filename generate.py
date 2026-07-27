@@ -64,10 +64,14 @@ def scanner_board():
 
 def scanner_prompt_section(board):
     if board is None:
-        return """SCANNER STATUS: no verified scanner data is available today.
-Build the "setups" table from web search as before, and append " (not
-scanner-verified)" to each setup's check_note so readers know these names were
-not machine-screened."""
+        return """SCANNER STATUS: the automated scanner has no usable data today, so
+setups come from web search exactly as the master prompt's own methodology
+describes. IMPORTANT: this is the NORMAL fallback mode, not a reason to leave
+the setups table empty or to replace single names with sector rows — search
+for qualifying post-earnings gaps, news gaps, and breakouts and list every
+name that meets the master prompt's criteria, with its usual grade and bias.
+The only difference: append " (not scanner-verified)" to each check_note so
+readers know these names were not machine-screened."""
     boarded = board.get("candidates", {}).get("boarded", [])
     headline = " | ".join(board.get("coverage", {}).get("headline", []))
     if not boarded:
