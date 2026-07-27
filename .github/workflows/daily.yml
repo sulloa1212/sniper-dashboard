@@ -5,6 +5,11 @@ on:
   # POSTs to this workflow's /dispatches endpoint. No GitHub schedule here so
   # the report can never double-generate.
   workflow_dispatch:            # manual "Run workflow" button + cron-job.org trigger
+    inputs:
+      skip_scanner:
+        description: "Ignore today's scanner board (use web-search setups)"
+        type: boolean
+        default: false
 
 permissions:
   contents: write
@@ -29,6 +34,7 @@ jobs:
       # scanner-verified). Only a run created TODAY is accepted — yesterday's
       # board must never masquerade as today's.
       - name: Fetch scanner board (non-fatal)
+        if: ${{ !inputs.skip_scanner }}
         env:
           GH_TOKEN: ${{ secrets.SCANNER_TOKEN }}
         run: |
