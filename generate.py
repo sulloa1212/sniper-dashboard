@@ -38,9 +38,16 @@ CONTRACT = open("dashboard_data.example.json", encoding="utf-8").read() \
 
 def previous_day():
     try:
-        return json.load(open("dashboard_data.json", encoding="utf-8"))
+        prev = json.load(open("dashboard_data.json", encoding="utf-8"))
     except Exception:
         return None
+    # Same-day re-runs must not anchor on today's earlier draft: the model
+    # copies its structure and the "yesterday" comparison becomes self-vs-self.
+    if prev.get("meta", {}).get("date_iso") == ny_today():
+        print("Previous data is today's earlier draft — ignoring it; the model "
+              "will source the prior session via web search.", file=sys.stderr)
+        return None
+    return prev
 
 def scanner_board():
     """Load today's sniper-scanner output (downloaded by the workflow into
