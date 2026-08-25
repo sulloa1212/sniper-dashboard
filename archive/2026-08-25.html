@@ -69,6 +69,7 @@
   .btn.ghost{background:transparent;color:var(--ink);border:1px solid var(--line);}
   .btn.back{margin-right:auto;text-decoration:none;display:inline-flex;align-items:center;}
   /* === Member notice gate (outside #shareable — never in the PNG) === */
+  #memberGate[hidden]{display:none!important;}
   #memberGate{position:fixed;inset:0;z-index:1000;display:flex;align-items:center;justify-content:center;
     padding:20px;background:rgba(4,8,14,.74);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);}
   #memberGate .gate-card{max-width:560px;width:100%;background:var(--panel);border:1px solid var(--line);
