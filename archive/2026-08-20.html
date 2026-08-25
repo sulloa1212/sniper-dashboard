@@ -68,6 +68,21 @@
     font-size:12px;text-transform:uppercase;}
   .btn.ghost{background:transparent;color:var(--ink);border:1px solid var(--line);}
   .btn.back{margin-right:auto;text-decoration:none;display:inline-flex;align-items:center;}
+  /* === Member notice gate (outside #shareable — never in the PNG) === */
+  #memberGate{position:fixed;inset:0;z-index:1000;display:flex;align-items:center;justify-content:center;
+    padding:20px;background:rgba(4,8,14,.74);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);}
+  #memberGate .gate-card{max-width:560px;width:100%;background:var(--panel);border:1px solid var(--line);
+    border-top:3px solid var(--acc);border-radius:16px;padding:28px 30px;box-shadow:0 24px 64px rgba(0,0,0,.55);}
+  #memberGate .gate-kicker{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--acc);
+    font-weight:800;margin-bottom:10px;}
+  #memberGate .gate-title{font-size:26px;font-weight:800;color:var(--ink);margin:0 0 14px;}
+  #memberGate p{color:var(--mut);font-size:15px;line-height:1.65;margin:0 0 14px;}
+  #memberGate a{color:var(--acc);}
+  #memberGate .gate-btn{display:block;width:100%;background:linear-gradient(135deg,var(--accent),var(--accent-2));
+    color:#fff;border:0;border-radius:999px;padding:14px 18px;font-size:15px;font-weight:800;
+    letter-spacing:.02em;cursor:pointer;margin-top:6px;}
+  #memberGate .gate-btn:hover{filter:brightness(1.1);}
+  #memberGate .gate-note{font-size:12px;color:var(--faint);text-align:center;margin:12px 0 0;}
   .btn:hover{filter:brightness(1.12);}
 
   #shareable{background:var(--bg);border:1px solid var(--line);border-radius:18px;
@@ -288,6 +303,38 @@
 </style>
 </head>
 <body>
+<!-- Member notice gate (outside #shareable, never in the PNG). The ack lives
+     in this browser's localStorage for 30 days; nothing is sent anywhere. -->
+<div id="memberGate" hidden role="dialog" aria-modal="true" aria-labelledby="gateTitle">
+  <div class="gate-card">
+    <div class="gate-kicker">Snipers &middot; Member Notice</div>
+    <div class="gate-title" id="gateTitle">Before you continue</div>
+    <p>These reports are <strong>educational tools only &mdash; not investment advice</strong> &mdash; and
+    they are generated with the assistance of AI, which can make mistakes. Always verify every price,
+    level and date with your broker before acting.</p>
+    <p>By continuing, you acknowledge the <strong>full disclaimer</strong> shown at the bottom of every
+    report and agree to our <a href="https://www.mwtradecoach.com/terms-and-conditions" target="_blank"
+    rel="noopener">Terms &amp; Conditions</a> and <a href="https://www.mwtradecoach.com/privacy-policy"
+    target="_blank" rel="noopener">Privacy Policy</a>.</p>
+    <button class="gate-btn" id="gateAccept">I Understand &amp; Agree &mdash; Enter</button>
+    <p class="gate-note">Remembered on this device for 30 days. Nothing is sent anywhere.</p>
+  </div>
+</div>
+<script>
+(function(){
+  var KEY="sniperGateAck", gate=document.getElementById("memberGate");
+  try{
+    if(Date.now() - (+localStorage.getItem(KEY)||0) < 30*864e5) return;  // acknowledged recently
+  }catch(e){ return; }  // storage blocked (private mode) — never lock members out
+  gate.hidden=false;
+  document.documentElement.style.overflow="hidden";
+  document.getElementById("gateAccept").addEventListener("click",function(){
+    try{ localStorage.setItem(KEY,String(Date.now())); }catch(e){}
+    gate.hidden=true;
+    document.documentElement.style.overflow="";
+  });
+})();
+</script>
 <main>
   <div class="toolbar">
     <a class="btn ghost back" href="https://www.mwtradecoach.com/products/snipers-live-trading-and-community-coaching">&larr; Back to Snipers AI Dashboard</a>
