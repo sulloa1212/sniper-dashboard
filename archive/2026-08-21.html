@@ -304,7 +304,7 @@
 </head>
 <body>
 <!-- Member notice gate (outside #shareable, never in the PNG). The ack lives
-     in this browser's localStorage for 30 days; nothing is sent anywhere. -->
+     in this browser's localStorage until the day ends; nothing is sent anywhere. -->
 <div id="memberGate" hidden role="dialog" aria-modal="true" aria-labelledby="gateTitle">
   <div class="gate-card">
     <div class="gate-kicker">Snipers &middot; Member Notice</div>
@@ -317,19 +317,19 @@
     rel="noopener">Terms &amp; Conditions</a> and <a href="https://www.mwtradecoach.com/privacy-policy"
     target="_blank" rel="noopener">Privacy Policy</a>.</p>
     <button class="gate-btn" id="gateAccept">I Understand &amp; Agree &mdash; Enter</button>
-    <p class="gate-note">Remembered on this device for 30 days. Nothing is sent anywhere.</p>
+    <p class="gate-note">Remembered on this device for the rest of the day. Nothing is sent anywhere.</p>
   </div>
 </div>
 <script>
 (function(){
   var KEY="sniperGateAck", gate=document.getElementById("memberGate");
   try{
-    if(Date.now() - (+localStorage.getItem(KEY)||0) < 30*864e5) return;  // acknowledged recently
+    if(localStorage.getItem(KEY) === new Date().toDateString()) return;  // acknowledged today
   }catch(e){ return; }  // storage blocked (private mode) — never lock members out
   gate.hidden=false;
   document.documentElement.style.overflow="hidden";
   document.getElementById("gateAccept").addEventListener("click",function(){
-    try{ localStorage.setItem(KEY,String(Date.now())); }catch(e){}
+    try{ localStorage.setItem(KEY,new Date().toDateString()); }catch(e){}
     gate.hidden=true;
     document.documentElement.style.overflow="";
   });
