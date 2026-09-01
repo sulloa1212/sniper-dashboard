@@ -100,3 +100,28 @@ jobs:
           done
           echo "::error::All push attempts failed"
           exit 1
+
+      # ---- Dead-man's switch: reportar a MWTC Health ---------------------
+      # `if: success()` ES el mecanismo. Una corrida fallida nunca llega hasta
+      # acá, y la AUSENCIA de reporte es lo que dispara la alerta.
+      #
+      # Pero "el job corrió" no es lo que queremos vigilar: generate.py sale
+      # con código 0 cuando el mercado está cerrado, así que un job exitoso no
+      # significa que se haya publicado nada. Verificamos que el reporte sea
+      # DE HOY antes de reportar — si no, el switch quedaría satisfecho por un
+      # informe viejo y nunca avisaría de una lista de feriados equivocada.
+      - name: Check in to MWTC Health
+        if: success()
+        run: |
+          TODAY="$(TZ=America/New_York date +%F)"
+          STAMP="$(python3 -c "import json;print(json.load(open('dashboard_data.json'))['meta']['date_iso'])" 2>/dev/null || echo '')"
+          if [ "$STAMP" != "$TODAY" ]; then
+            echo "Report is dated ${STAMP:-unknown}, not $TODAY — market closed or generation skipped. No check-in."
+            exit 0
+          fi
+          curl -fsS -X POST \
+            -H "Authorization: Bearer ${{ secrets.HEALTH_CHECKIN_TOKEN }}" \
+            -H "Content-Type: application/json" \
+            -d "{\"run\":\"${{ github.run_id }}\",\"report_date\":\"$STAMP\"}" \
+            https://mwtc-health.green-paper-667a.workers.dev/checkin/sniper-report
+          echo "Checked in for $STAMP."
